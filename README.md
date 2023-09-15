@@ -27,8 +27,4 @@ npm install --save <my-dependency>
 That way it is added to package.json for the next person to install. Otherwise, add the package manually to package.json
 
 
-Before pushing to github build the static files so it can be hosted on Github Pages:
-```bash
-npx next build
-```
 
