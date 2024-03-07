@@ -1,52 +1,69 @@
 <html>
     <style>
+    .text {
+        font-family:"Courier New", Courier, monospace;
+        font-size: 20px;
+        font-weight: bold;
+        padding:80px;
+        color: gray;
+        text-align: center;
+    }
     .frogPosition {
         position: absolute;
-        bottom: 0px;
+        bottom: 100px;
+        left:100px
     }
 
     .shroomPosition {
         position: absolute;
-        bottom: 0px;
+        bottom: 100px;
         right:0px
     }
+
     </style>
     <body>
+        <div class="text">
+            Press the space bar to jump!
+        </div>
         <image src="assets/FrogSit.png" class="frogPosition">
         <image src="assets/ShroomPink.png" class="shroomPosition"></image>
     </body>
 </html>
 
 <script>
-    let frogDirection = "down";
-    let frogPosition = 0;
+    let frogDirection = "up";
+    const BOTTOM = 100;
+    let frogPosition = BOTTOM;
 
     let shroomPosition = 0;
+   
+
+
     
 
     // Modify frog's position
-    async function moveFrog() {
+    async function jumpFrog() {
         // Call recursively forever
         setTimeout(function() {
-            const MAXHEIGHT = 100;
+            const MAXHEIGHT = 300;
 
             var image = document.querySelector('.frogPosition');
+            image.src = 'assets/FrogJump.png'
 
-            if (frogDirection === "down") frogPosition -= 1
-                
-            else frogPosition += 2
-
-
-            if (frogPosition <= MAXHEIGHT/2 && frogDirection === "down" ) image.src = 'assets/FrogSit.png'
-            else image.src = 'assets/FrogJump.png'
-   
+            if (frogDirection === "down") frogPosition -= 4
+            else frogPosition += 4.5
 
             if (frogPosition >= MAXHEIGHT) frogDirection = "down"
-            else if (frogPosition <= 0) frogDirection = "up"
+            else if (frogPosition <= BOTTOM) frogDirection = "up"
             
             image.style.bottom = frogPosition + 'px';
 
-            moveFrog();
+            if (frogPosition > BOTTOM) jumpFrog(); // Recursively call while jumping
+            else {
+                image.src = 'assets/FrogSit.png'
+            }
+
+            
         }, 10); // Frog updated every sec
         
     }
@@ -55,10 +72,11 @@
     async function moveShroom() {
         // Call recursively forever
         setTimeout(function() {
+            const MAXWIDTH = screen.width;
             var image = document.querySelector('.shroomPosition');
 
-            shroomPosition += 1
-            if (shroomPosition >= 500)shroomPosition = 0
+            shroomPosition += 5
+            if (shroomPosition >= MAXWIDTH)shroomPosition = 0
             image.style.right = shroomPosition + 'px';
 
             moveShroom();
@@ -67,9 +85,17 @@
     }
 
 
+    // Jump frog when space bar pressed
+    document.addEventListener('keydown', function(event) {
+        if (event.key === ' ') {
+            frogPosition = BOTTOM;
+            jumpFrog();
+        }
+    });
+    
 
-    moveFrog();
-    moveShroom();
+
+    moveShroom()
 
 
 </script>
