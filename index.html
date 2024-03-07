@@ -31,21 +31,20 @@
 </html>
 
 <script>
-    let frogDirection = "up";
     const BOTTOM = 100;
-    let frogPosition = BOTTOM;
+    const MAXHEIGHT = BOTTOM + 300;
 
+
+    let frogDirection = "up";
+    let frogPosition = BOTTOM;
     let shroomPosition = 0;
    
-
-
-    
 
     // Modify frog's position
     async function jumpFrog() {
         // Call recursively forever
         setTimeout(function() {
-            const MAXHEIGHT = 300;
+            
 
             var image = document.querySelector('.frogPosition');
             image.src = 'assets/FrogJump.png'
