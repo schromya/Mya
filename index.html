@@ -29,12 +29,22 @@
     async function moveFrog() {
         // Call recursively forever
         setTimeout(function() {
+            const MAXHEIGHT = 100;
+
+            var image = document.querySelector('.frogPosition');
 
             if (frogDirection === "down") frogPosition += 1
-            else frogPosition -= 1
-            if (frogPosition >= 100) frogDirection = "up"
+                
+            else frogPosition -= 2
+
+
+            if (frogPosition >= MAXHEIGHT/2 && frogDirection === "down" ) image.src = 'assets/FrogSit.png'
+            else image.src = 'assets/FrogJump.png'
+   
+
+            if (frogPosition >= MAXHEIGHT) frogDirection = "up"
             else if (frogPosition <= 0) frogDirection = "down"
-            var image = document.querySelector('.frogPosition');
+            
             image.style.top = frogPosition + 'px';
 
             moveFrog();
@@ -46,10 +56,10 @@
     async function moveShroom() {
         // Call recursively forever
         setTimeout(function() {
+            var image = document.querySelector('.shroomPosition');
+
             shroomPosition += 1
             if (shroomPosition >= 500)shroomPosition = 0
-            
-            var image = document.querySelector('.shroomPosition');
             image.style.right = shroomPosition + 'px';
 
             moveShroom();
