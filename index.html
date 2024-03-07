@@ -2,12 +2,12 @@
     <style>
     .frogPosition {
         position: absolute;
-        top: 0px;
+        bottom: 0px;
     }
 
     .shroomPosition {
         position: absolute;
-        top: 50px;
+        bottom: 0px;
         right:0px
     }
     </style>
@@ -22,6 +22,7 @@
     let frogPosition = 0;
 
     let shroomPosition = 0;
+    
 
     // Modify frog's position
     async function moveFrog() {
@@ -31,19 +32,19 @@
 
             var image = document.querySelector('.frogPosition');
 
-            if (frogDirection === "down") frogPosition += 1
+            if (frogDirection === "down") frogPosition -= 1
                 
-            else frogPosition -= 2
+            else frogPosition += 2
 
 
-            if (frogPosition >= MAXHEIGHT/2 && frogDirection === "down" ) image.src = 'assets/FrogSit.png'
+            if (frogPosition <= MAXHEIGHT/2 && frogDirection === "down" ) image.src = 'assets/FrogSit.png'
             else image.src = 'assets/FrogJump.png'
    
 
-            if (frogPosition >= MAXHEIGHT) frogDirection = "up"
-            else if (frogPosition <= 0) frogDirection = "down"
+            if (frogPosition >= MAXHEIGHT) frogDirection = "down"
+            else if (frogPosition <= 0) frogDirection = "up"
             
-            image.style.top = frogPosition + 'px';
+            image.style.bottom = frogPosition + 'px';
 
             moveFrog();
         }, 10); // Frog updated every sec
