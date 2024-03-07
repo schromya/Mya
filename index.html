@@ -1,0 +1,43 @@
+<html>
+    <head>
+    </head>
+    <style>
+    .frogPosition {
+        position: absolute;
+        top: 0px;
+    }
+    </style>
+    <body>
+        <image src="assets/FrogSit.png" class="frogPosition">
+    </body>
+</html>
+
+<script>
+    let direction = "down";
+    let position = 0;
+    /*
+    * Modify frog's position
+    */
+
+    async function moveFrog() {
+        // Call recursively forever
+        setTimeout(function() {
+
+            if (direction === "down") position += 1
+            else position -= 1
+            if (position >= 100) direction = "up"
+            else if (position <= 0) direction = "down"
+            var image = document.querySelector('.frogPosition');
+            image.style.top = position + 'px';
+
+            moveFrog();
+        }, 10); // Frog updated every sec
+        
+    }
+
+
+
+    moveFrog()
+
+
+</script>
