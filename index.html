@@ -6,38 +6,61 @@
         position: absolute;
         top: 0px;
     }
+
+    .shroomPosition {
+        position: absolute;
+        top: 50px;
+        right:0px
+    }
     </style>
     <body>
         <image src="assets/FrogSit.png" class="frogPosition">
+        <image src="assets/ShroomPink.png" class="shroomPosition"></image>
     </body>
 </html>
 
 <script>
-    let direction = "down";
-    let position = 0;
-    /*
-    * Modify frog's position
-    */
+    let frogDirection = "down";
+    let frogPosition = 0;
 
+    let shroomPosition = 0;
+
+    // Modify frog's position
     async function moveFrog() {
         // Call recursively forever
         setTimeout(function() {
 
-            if (direction === "down") position += 1
-            else position -= 1
-            if (position >= 100) direction = "up"
-            else if (position <= 0) direction = "down"
+            if (frogDirection === "down") frogPosition += 1
+            else frogPosition -= 1
+            if (frogPosition >= 100) frogDirection = "up"
+            else if (frogPosition <= 0) frogDirection = "down"
             var image = document.querySelector('.frogPosition');
-            image.style.top = position + 'px';
+            image.style.top = frogPosition + 'px';
 
             moveFrog();
         }, 10); // Frog updated every sec
         
     }
 
+    // Modify Mushrooms position
+    async function moveShroom() {
+        // Call recursively forever
+        setTimeout(function() {
+            shroomPosition += 1
+            if (shroomPosition >= 500)shroomPosition = 0
+            
+            var image = document.querySelector('.shroomPosition');
+            image.style.right = shroomPosition + 'px';
+
+            moveShroom();
+        }, 10); // Shroom updated every sec
+        
+    }
 
 
-    moveFrog()
+
+    moveFrog();
+    moveShroom();
 
 
 </script>
