@@ -8,93 +8,17 @@
         color: gray;
         text-align: center;
     }
-    .frogPosition {
-        position: absolute;
-        bottom: 100px;
-        left:100px
-    }
-
-    .shroomPosition {
-        position: absolute;
-        bottom: 100px;
-        right:0px
-    }
 
     </style>
     <body>
         <div class="text">
             Press the space bar to jump!
         </div>
-        <image src="assets/FrogSit.png" class="frogPosition">
-        <image src="assets/ShroomPink.png" class="shroomPosition"></image>
+
+        <!-- Image assets set in javascript -->
+        <image id="frog">
+        <image id="shroom" ></image>
+        
     </body>
 </html>
-
-<script>
-    const BOTTOM = 100;
-    const MAXHEIGHT = BOTTOM + 300;
-
-
-    let frogDirection = "up";
-    let frogPosition = BOTTOM;
-    let shroomPosition = 0;
-   
-
-    // Modify frog's position
-    async function jumpFrog() {
-        // Call recursively forever
-        setTimeout(function() {
-            
-
-            var image = document.querySelector('.frogPosition');
-            image.src = 'assets/FrogJump.png'
-
-            if (frogDirection === "down") frogPosition -= 4
-            else frogPosition += 4.5
-
-            if (frogPosition >= MAXHEIGHT) frogDirection = "down"
-            else if (frogPosition <= BOTTOM) frogDirection = "up"
-            
-            image.style.bottom = frogPosition + 'px';
-
-            if (frogPosition > BOTTOM) jumpFrog(); // Recursively call while jumping
-            else {
-                image.src = 'assets/FrogSit.png'
-            }
-
-            
-        }, 10); // Frog updated every sec
-        
-    }
-
-    // Modify Mushrooms position
-    async function moveShroom() {
-        // Call recursively forever
-        setTimeout(function() {
-            const MAXWIDTH = screen.width;
-            var image = document.querySelector('.shroomPosition');
-
-            shroomPosition += 5
-            if (shroomPosition >= MAXWIDTH)shroomPosition = 0
-            image.style.right = shroomPosition + 'px';
-
-            moveShroom();
-        }, 10); // Shroom updated every sec
-        
-    }
-
-
-    // Jump frog when space bar pressed
-    document.addEventListener('keydown', function(event) {
-        if (event.key === ' ') {
-            frogPosition = BOTTOM;
-            jumpFrog();
-        }
-    });
-    
-
-
-    moveShroom()
-
-
-</script>
+<script src="gameLogic.js"></script>
