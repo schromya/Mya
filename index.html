@@ -9,6 +9,21 @@
         text-align: center;
     }
 
+    /* Scale images smaller on mobile */
+    .responsive-img {
+        width: 15%;
+        height: auto;
+    }
+
+    /* Styles for screens that are 600px wide or less */
+    @media (max-width: 600px) {
+        responsive-img  {
+            width: 15%; /* Adjust the size as needed */
+            height: auto;
+        }
+    } 
+
+
     </style>
     <body>
         <div class="text">
@@ -17,8 +32,8 @@
 
         <!-- Image assets set in javascript -->
 
-        <img id="frog">
-        <img id="shroom">
+        <img id="frog" class="responsive-img ">
+        <img id="shroom" class="responsive-img ">
         <img id="gameOver">
         <div id="score" class="text"></div>
 
