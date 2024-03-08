@@ -201,6 +201,14 @@ document.addEventListener('keydown', function(event) {
 });
 
 
+// Jump frog when space bar or when the screen is tapped
+document.addEventListener('touchstart', function(event) {
+    restart = true;
+    moveFrog(frog);
+    // Prevent the default touch behavior like scrolling
+    event.preventDefault();
+});
+
 // Start Shroom Movement
 moveShroom(shroom)
 
