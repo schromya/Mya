@@ -153,10 +153,16 @@ class Game {
 
 // Script
 
+let offset = 0
+
+
+if (window.innerWidth <= 600) offset = 80
+
+
 frog = new Sprite(
     'frog', 'assets/FrogSit.png', '',
-    100, 100, Direction.UP, 
-    100, 100, 100, 400
+    100 - offset, 100, Direction.UP, 
+    100, 100, 100, 380 - offset
 )
 
 // Start and end mushroom off screen

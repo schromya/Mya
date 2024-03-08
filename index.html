@@ -3,50 +3,70 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Mya Schroder</title>
-        
+
     </head>
     <style>
-    .text {
-        font-family:"Courier New", Courier, monospace;
-        font-size: 20px;
-        font-weight: bold;
-        padding:80px;
-        color: gray;
-        text-align: center;
-    }
+        .text {
+            font-family:"Courier New", Courier, monospace;
+            font-size: 20px;
+            font-weight: bold;
+            padding:80px;
+            color: gray;
+            text-align: center;
+        }
 
-    .lg-view{
-        display:block;
-    }
+        .lg-view{
+            display:block;
+        }
 
-    .sm-view{
-        display:none;
-    }
+        .sm-view{
+            display:none;
+        }
 
-    @media screen and (max-width: 600px) {
-    .lg-view{
-       display:none;
-    }
-
-    .sm-view{
-       display:block;
-    }
-
-    /* Scale images smaller on mobile */
-    .responsive-img {
-        width: auto;
-        height: auto;
-
-    }
-    /* Styles for screens that are 600px wide or less */
-    @media (max-width: 600px) {
-        .responsive-img  {
-            width: 20%; /* Adjust the size as needed */
+        .responsive-frog {
+            width: auto;
             height: auto;
         }
-    } 
 
-}
+
+        .responsive-shroom {
+            width: auto;
+            height: auto;
+        }
+
+        .responsive-popup {
+            width: auto;
+            height: auto;
+        }
+
+        /* Scale images smaller on mobile */
+        @media screen and (max-width: 600px) {
+            .lg-view{
+                display:none;
+            }
+
+            .sm-view{
+                display:block;
+            }
+
+            .responsive-frog  {
+                width: 20%; /* Adjust the size as needed */
+                height: auto;
+            }
+
+            .responsive-shroom  {
+                width: 15%; /* Adjust the size as needed */
+                height: auto;
+            }
+
+            .responsive-popup {
+                width: 40%; /* Adjust the size as needed */
+                height: auto;
+            }
+
+        }
+
+
 
 
 
@@ -59,9 +79,9 @@
 
         <!-- Image assets set in javascript -->
 
-        <img id="frog" class="responsive-img ">
-        <img id="shroom" class="responsive-img ">
-        <img id="gameOver">
+        <img id="frog" class="responsive-frog">
+        <img id="shroom" class="responsive-shroom">
+        <img id="gameOver" class="responsive-popup">
         <div id="score" class="text"></div>
 
     </body>
