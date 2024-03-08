@@ -196,13 +196,16 @@ game.trackSprite(shroom)
 
 let restart = false;
 
+let enable = true;
+
 
 
 // Jump frog when space bar pressed
 document.addEventListener('keydown', function(event) {
     restart = true;
     if (event.key === ' ') {
-        moveFrog(frog);
+        if (enable) moveFrog(frog);
+        enable = true;
     }
 });
 
@@ -210,7 +213,8 @@ document.addEventListener('keydown', function(event) {
 // Jump frog when space bar or when the screen is tapped
 document.addEventListener('touchstart', function(event) {
     restart = true;
-    moveFrog(frog);
+    if (enable) moveFrog(frog);
+    enable = true;
     // Prevent the default touch behavior like scrolling
     // event.preventDefault();
 });
@@ -235,6 +239,7 @@ function checkCollision() {
             frog.direction = Direction.STOPPED;
             frog.updateImage('assets/FrogDead.png')
             gameOverText.updateXPosition(gameOverText.MAX_X_POSITION)
+            enable = false;
 
             checkRestart()
         }
