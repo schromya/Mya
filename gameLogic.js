@@ -206,7 +206,7 @@ document.addEventListener('touchstart', function(event) {
     restart = true;
     moveFrog(frog);
     // Prevent the default touch behavior like scrolling
-    event.preventDefault();
+    // event.preventDefault();
 });
 
 // Start Shroom Movement
