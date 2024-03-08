@@ -9,26 +9,47 @@
         text-align: center;
     }
 
-    /* Scale images smaller on mobile */
-    .responsive-img {
-        width: 15%;
-        height: auto;
+    .lg-view{
+        display:block;
     }
 
+    .sm-view{
+        display:none;
+    }
+
+    @media screen and (max-width: 500px) {
+    .lg-view{
+       display:none;
+    }
+
+    .sm-view{
+       display:inline-block;
+    }
+
+    /* Scale images smaller on mobile */
+    .responsive-img {
+        width: auto;
+        height: auto;
+
+    }
     /* Styles for screens that are 600px wide or less */
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
         responsive-img  {
             width: 15%; /* Adjust the size as needed */
             height: auto;
         }
     } 
 
+}
+
+
+
 
     </style>
     <body>
-        <div class="text">
-            Press the space bar to jump!
-        </div>
+
+        <div class="lg-view text ">Press the space bar to jump!</div>
+        <div class="sm-view text">Tap to jump</div>
 
         <!-- Image assets set in javascript -->
 
