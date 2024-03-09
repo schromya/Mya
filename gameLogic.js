@@ -261,6 +261,7 @@ function checkRestart() {
 
         if (restart) {
             frog.reset()
+            frog.updateImage('assets/FrogSit.png')
             shroom.reset()
             gameOverText.reset()
             game.score = 0
