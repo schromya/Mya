@@ -153,45 +153,49 @@ class Game {
 
 // Script
 
-let offset = 0
+let xOffset = 0
+let smallOffset = 0
+let yOffset = 0
 
 
-if (window.innerWidth <= 600) offset = 80
+if (window.innerWidth <= 600) {
+    xOffset = 80
+    smallOffset = 35
+    yOffset = 60
+}
 
 gameText = new Sprite(
     'gameText', '', 'Press the space bar or tap to jump!',
-    50, 250 , Direction.STOPPED, 
+    50 - smallOffset, 80 , Direction.STOPPED, 
     0, 0, 0, 0
 )
 
 frog = new Sprite(
     'frog', 'assets/FrogSit.png', '',
-    100 - offset, 100, Direction.UP, 
-    100, 100, 100, 330 - offset
+    100 - xOffset, 0, Direction.UP, 
+    100, 100, 0, 200 - yOffset
 )
 
 // Start and end mushroom off screen
 shroom = new Sprite(
     'shroom', 'assets/ShroomPink.png', '',
-    window.innerWidth , 100, Direction.LEFT, 
-    -100, window.innerWidth, 100, 100
+    window.innerWidth , 0, Direction.LEFT, 
+    -100, window.innerWidth, 0, 0
 )
 
 // Start off screen and bring to screen when died
 gameOverText = new Sprite(
     'gameOver', 'assets/GameOver.png', '',
-   -300, 150 , Direction.STOPPED, 
+   -300, 20 , Direction.STOPPED, 
    -300,  window.innerWidth/2 - 145/2, 0, 0
 )
-
 
 // Start off screen and bring to screen when died
 score = new Sprite(
     'score', '', 'Score: 0',
-    window.innerWidth - 200 + offset, 250 , Direction.STOPPED, 
+    window.innerWidth - 200 + xOffset, 80 , Direction.STOPPED, 
     0, 0, 0, 0
 )
-
 
 
 game = new Game()
@@ -285,7 +289,7 @@ function moveFrog() {
             else newYPos += 4.5
 
             if (newYPos >= frog.MAX_Y_POSITION) frog.direction = Direction.DOWN
-            else if (newYPos <= frog.MIN_X_POSITION) frog.direction = Direction.UP
+            else if (newYPos <= frog.MIN_Y_POSITION) frog.direction = Direction.UP
             
             frog.updateYPosition(newYPos)
 

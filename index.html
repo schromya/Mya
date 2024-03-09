@@ -9,11 +9,11 @@
 
     </head>
     <body>
-        <!-- Navbar -->
+        <!---------------------------------------- Navbar ---------------------------------------->
         <nav class="content-spread">
-            <h class="text-bold text-lg p2"> Mya Schroder </h>
+            <span class="text-bold text-lg text-gray p-2"> Mya Schroder </span>
 
-            <div class="p2">
+            <div class="p-2">
                 <a href="mailto:schromya@gmail.com" target="_blank"> <img src="static/EmailLogo.png" class="img-sm img-gray"></a>
                 <a href="https://github.com/schromya" target="_blank"> <img src="static/GithubLogo.png" class="img-sm img-gray"></a>
                 <a href="https://linkedin.com/in/schromya" target="_blank"> <img src="static/LinkedinLogo.png" class="img-sm img-gray"></a>
@@ -21,17 +21,36 @@
 
         </nav>
 
-        <!-- Game sprites controlled in javascript -->
-        <div id="gameText" class="text-bold text-md"></div>
-        <img id="frog" class="img-lg">
-        <img id="shroom" class="img-lg">
-        <img id="gameOver" class="img-xl">
-        <div id="score" class="text-bold text-md"></div>
+        <!---------------------------------------- BODY ---------------------------------------->
+        <div class='bg-gray m2 p-2 text-white content-scroll'>
+            <span class="text-md content-spread text-bold"> Experience </span>
 
-        <footer class="text-sm content-stick-bottom p2">
+            <ul id="experience" class="text-sm"></ul>
+
+            <div class="content-center text-md text-bold">
+                <span> More coming soon! </span>
+            </div>
+
+        </div>
+
+        <!---------------------------------------- GAME ---------------------------------------->
+        <div class>
+            <!-- Game sprites controlled in javascript -->
+
+            <div id="gameText" class="text-bold text-md text-gray"></div>
+            <img id="frog" class="img-lg">
+            <img id="shroom" class="img-lg">
+            <img id="gameOver" class="img-xl">
+            <div id="score" class="text-bold text-md text-gray"></div>
+
+        </div>
+
+        <!---------------------------------------- FOOTER ---------------------------------------->
+        <!-- <footer class="text-sm text-center content-stick-bottom p-2 ">
             Website designed and <a href="https://github.com/schromya/Mya" target="_blank">programmed</a> by Mya Schroder | 2024
-        </footer>
+        </footer> -->
 
     </body>
 </html>
 <script src="gameLogic.js"></script>
+<script src="dataInjest.js"></script>
