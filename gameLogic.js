@@ -218,6 +218,7 @@ document.addEventListener('keydown', function(event) {
 
 // Jump frog when space bar or when the screen is tapped
 document.addEventListener('touchstart', function(event) {
+    gameText.updateInnerContent('') // Take away content when start jumping
     restart = true;
     if (enable && frog.yPosition ) moveFrog(frog);
     enable = true;
