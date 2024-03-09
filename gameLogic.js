@@ -166,7 +166,7 @@ if (window.innerWidth <= 600) {
 
 gameText = new Sprite(
     'gameText', '', 'Press the space bar or tap to jump!',
-    50 - smallOffset, 80 , Direction.STOPPED, 
+    50 - smallOffset, 85 , Direction.STOPPED, 
     0, 0, 0, 0
 )
 
@@ -193,7 +193,7 @@ gameOverText = new Sprite(
 // Start off screen and bring to screen when died
 score = new Sprite(
     'score', '', 'Score: 0',
-    window.innerWidth - 200 + xOffset, 80 , Direction.STOPPED, 
+    window.innerWidth - 200 + xOffset, 85 , Direction.STOPPED, 
     0, 0, 0, 0
 )
 
@@ -224,7 +224,7 @@ document.addEventListener('keydown', function(event) {
 document.addEventListener('touchstart', function(event) {
     gameText.updateInnerContent('') // Take away content when start jumping
     restart = true;
-    if (enable && frog.yPosition ) moveFrog(frog);
+    if (enable) moveFrog(frog);
     enable = true;
     // Prevent the default touch behavior like scrolling
     // event.preventDefault();

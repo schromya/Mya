@@ -36,7 +36,6 @@ function populateData(data, ID) {
 
     // TODO rename single to better name when I have more braincells
     for (let single of data[ID]) {
-        console.log(single)
         let item = document.createElement('div')
 
         item.innerHTML = 
@@ -52,7 +51,7 @@ function populateData(data, ID) {
             </div>
             <br>
 
-            <div class="content-spread text-italic pl-2">
+            <div class="content-spread pl-2">
                 <span>• ${single["descriptions"].join('<br> • ')}</span>
             </div>
             <br>

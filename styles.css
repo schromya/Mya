@@ -2,7 +2,7 @@
     Global
 ***********************************************************************************/
 * {
-    font-family:"Courier New", Courier, monospace;
+    font-family: Verdana, Helvetica, sans-serif;
 }
 
 a { 
@@ -68,7 +68,7 @@ a {
 
 
 .content-scroll {
-    height: calc(100vh - 300px); /* Portion of the viewport height */
+    height: calc(100vh - 320px); /* Portion of the viewport height */
     overflow-y: auto; /* Enables vertical scrolling if needed */
     overflow-x: hidden; /* Disables horizontal scrolling */
 
