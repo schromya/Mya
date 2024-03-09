@@ -158,11 +158,16 @@ let offset = 0
 
 if (window.innerWidth <= 600) offset = 80
 
+gameText = new Sprite(
+    'gameText', '', 'Press the space bar or tap to jump!',
+    50, 250 , Direction.STOPPED, 
+    0, 0, 0, 0
+)
 
 frog = new Sprite(
     'frog', 'assets/FrogSit.png', '',
     100 - offset, 100, Direction.UP, 
-    100, 100, 100, 380 - offset
+    100, 100, 100, 330 - offset
 )
 
 // Start and end mushroom off screen
@@ -183,7 +188,7 @@ gameOverText = new Sprite(
 // Start off screen and bring to screen when died
 score = new Sprite(
     'score', '', 'Score: 0',
-    window.innerWidth - 300, 200 , Direction.STOPPED, 
+    window.innerWidth - 200 + offset, 250 , Direction.STOPPED, 
     0, 0, 0, 0
 )
 
@@ -204,6 +209,7 @@ let enable = true;
 document.addEventListener('keydown', function(event) {
     restart = true;
     if (event.key === ' ') {
+        gameText.updateInnerContent('') // Take away content when start jumping
         if (enable) moveFrog(frog);
         enable = true;
     }
@@ -213,7 +219,7 @@ document.addEventListener('keydown', function(event) {
 // Jump frog when space bar or when the screen is tapped
 document.addEventListener('touchstart', function(event) {
     restart = true;
-    if (enable) moveFrog(frog);
+    if (enable && frog.yPosition ) moveFrog(frog);
     enable = true;
     // Prevent the default touch behavior like scrolling
     // event.preventDefault();

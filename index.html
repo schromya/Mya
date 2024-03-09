@@ -1,88 +1,36 @@
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Mya Schroder</title>
 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
     </head>
-    <style>
-        .text {
-            font-family:"Courier New", Courier, monospace;
-            font-size: 20px;
-            font-weight: bold;
-            padding:80px;
-            color: gray;
-            text-align: center;
-        }
-
-        .lg-view{
-            display:block;
-        }
-
-        .sm-view{
-            display:none;
-        }
-
-        .responsive-frog {
-            width: auto;
-            height: auto;
-        }
-
-
-        .responsive-shroom {
-            width: auto;
-            height: auto;
-        }
-
-        .responsive-popup {
-            width: auto;
-            height: auto;
-        }
-
-        /* Scale images smaller on mobile */
-        @media screen and (max-width: 600px) {
-            .lg-view{
-                display:none;
-            }
-
-            .sm-view{
-                display:block;
-            }
-
-            .responsive-frog  {
-                width: 20%; /* Adjust the size as needed */
-                height: auto;
-            }
-
-            .responsive-shroom  {
-                width: 15%; /* Adjust the size as needed */
-                height: auto;
-            }
-
-            .responsive-popup {
-                width: 40%; /* Adjust the size as needed */
-                height: auto;
-            }
-
-        }
-
-
-
-
-
-
-    </style>
     <body>
+        <!-- Navbar -->
+        <nav class="content-spread">
+            <h class="text-bold text-lg p2"> Mya Schroder </h>
 
-        <div class="lg-view text ">Press the space bar to jump!</div>
-        <div class="sm-view text">Tap to jump</div>
+            <div class="p2">
+                <a href="mailto:schromya@gmail.com" target="_blank"> <img src="static/EmailLogo.png" class="img-sm img-gray"></a>
+                <a href="https://github.com/schromya" target="_blank"> <img src="static/GithubLogo.png" class="img-sm img-gray"></a>
+                <a href="https://linkedin.com/in/schromya" target="_blank"> <img src="static/LinkedinLogo.png" class="img-sm img-gray"></a>
+            </div>
 
-        <!-- Image assets set in javascript -->
+        </nav>
 
-        <img id="frog" class="responsive-frog">
-        <img id="shroom" class="responsive-shroom">
-        <img id="gameOver" class="responsive-popup">
-        <div id="score" class="text"></div>
+        <!-- Game sprites controlled in javascript -->
+        <div id="gameText" class="text-bold text-md"></div>
+        <img id="frog" class="img-lg">
+        <img id="shroom" class="img-lg">
+        <img id="gameOver" class="img-xl">
+        <div id="score" class="text-bold text-md"></div>
+
+        <footer class="text-sm content-stick-bottom p2">
+            Website designed and <a href="https://github.com/schromya/Myax" target="_blank">programmed</a> by Mya Schroder | 2024
+        </footer>
 
     </body>
 </html>
