@@ -4,7 +4,7 @@ const data = {
             "title": "Data Processing Developer",
             "company": "",
             "date": "Sep 2023 - Oct 2023",
-            "location": "Anchorage, Alaska",
+            "location": "Anchorage, AK",
             "skills": ["Python"],
             "descriptions": [
                 "Created a data processing pipeline in Python (which detected gaps, qualified and discarded data, and filled gaps using interpolation) to prepare data for an ML model which allowed the client company to forecast environmental conditions before they were to occur."
