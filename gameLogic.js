@@ -180,8 +180,8 @@ shroom = new Sprite(
 // Start off screen and bring to screen when died
 gameOverText = new Sprite(
     'gameOver', 'assets/GameOver.png', '',
-   -300, 200 , Direction.STOPPED, 
-   -300,  window.innerWidth/2 - 100, 200, 200
+   -300, 150 , Direction.STOPPED, 
+   -300,  window.innerWidth/2 - 145/2, 0, 0
 )
 
 
