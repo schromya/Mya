@@ -83,7 +83,7 @@ a {
 
 /* Static height equal to height of main content block (content-scrollable) */
 .min-static-height {
-    min-height: calc(100vh - 240px);
+    min-height: calc(100vh - 280px);
 }
 
 .content-spread {
@@ -111,7 +111,7 @@ a {
 
 
 .content-scroll {
-    height: calc(100vh - 240px); /* Portion of the viewport height */
+    height: calc(100vh - 280px); /* Portion of the viewport height */
     overflow-y: auto; /* Enables vertical scrolling if needed */
     overflow-x: hidden; /* Disables horizontal scrolling */
 
