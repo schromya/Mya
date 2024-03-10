@@ -222,12 +222,16 @@ document.addEventListener('keydown', function(event) {
 
 // Jump frog when space bar or when the screen is tapped
 document.addEventListener('touchstart', function(event) {
-    gameText.updateInnerContent('') // Take away content when start jumping
-    restart = true;
-    if (enable) moveFrog(frog);
-    enable = true;
-    // Prevent the default touch behavior like scrolling
-    // event.preventDefault();
+    var touchY = event.touches[0].clientY;
+
+    // If touch the lower part of the screen, then register the tap 
+    if (touchY >= window.innerHeight - 100) {
+        gameText.updateInnerContent('') // Take away content when start jumping
+        restart = true;
+        
+        if (enable) moveFrog(frog);
+        enable = true;
+    }
 });
 
 // Start Shroom Movement

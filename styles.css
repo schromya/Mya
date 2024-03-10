@@ -81,6 +81,11 @@ a {
 }
 
 
+/* Static height equal to height of main content block (content-scrollable) */
+.min-static-height {
+    min-height: calc(100vh - 220px);
+}
+
 .content-spread {
     display: flex;
     justify-content: space-between;
@@ -91,7 +96,6 @@ a {
     position: -webkit-sticky; /* For Safari */
     position: sticky;
     top: 0; /* Set to the top of the parent container */
-    z-index: 1000; /* Ensure it's above other content */
     background-color: inherit; /* Optional: to maintain the background */
 } 
 
@@ -107,7 +111,7 @@ a {
 
 
 .content-scroll {
-    height: calc(100vh - 320px); /* Portion of the viewport height */
+    height: calc(100vh - 220px); /* Portion of the viewport height */
     overflow-y: auto; /* Enables vertical scrolling if needed */
     overflow-x: hidden; /* Disables horizontal scrolling */
 
