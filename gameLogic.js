@@ -227,6 +227,7 @@ let enable = true;
 document.addEventListener('keydown', function(event) {
     restart = true;
     if (event.key === ' ') {
+        event.preventDefault() // Prevent scrolling w/ spacebar
         gameText.updateInnerContent('') // Take away content when start jumping
         if (enable) moveFrog(frog);
         enable = true;
