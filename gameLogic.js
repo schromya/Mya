@@ -126,18 +126,32 @@ class Game {
 
     // Check if this sprite has collided with anything else in the game frame
     isCollision(sprite) {
+
+        // To touch core of sprite
+        const BUFFER = 10;
+
+        // Make sure it is not the current sprite (10 for really touching)
         for (let checkSprite of this.sprites) {
-            // Make sure it is not the current sprite (-2 for really touching)
+            // Make sure it is not the current sprite
             if (sprite.ID !== checkSprite.ID) {
+
+                const lowXBound = sprite.xBounds[0] + BUFFER
+                const highXBound = sprite.xBounds[1] - BUFFER
+                const lowYBound = sprite.yBounds[0] + BUFFER
+                const highYBound = sprite.yBounds[1] - BUFFER
+
+                const checkLowXBound = checkSprite.xBounds[0] + BUFFER
+                const checkHighXBound = checkSprite.xBounds[1] - BUFFER
+                const checkLowYBound = checkSprite.yBounds[0] + BUFFER
+                const checkHighYBound = checkSprite.yBounds[1] - BUFFER
+
+
+
                 // Check if sprite is to the left or right of checkSprite 
-                if (sprite.xBounds[1] < checkSprite.xBounds[0] || sprite.xBounds[0] > checkSprite.xBounds[1]) {
-                    continue; // No collision on X axis
-                }
+                if (highXBound < checkLowXBound || lowXBound > checkHighXBound) continue; // No collision on X axis
 
                 // Check if sprite is above or below checkSprite
-                if (sprite.yBounds[1] < checkSprite.yBounds[0] || sprite.yBounds[0] > checkSprite.yBounds[1]) {
-                    continue; // No collision on Y axis
-                }
+                if (highYBound < checkLowYBound || lowYBound > checkHighYBound) continue; // No collision on Y axis
 
                 // If we reach here, sprites are colliding
                 return true;
