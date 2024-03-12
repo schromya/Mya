@@ -14,11 +14,18 @@ table {
     border-spacing:30px 30px;
 }
 
-@media (max-width: 1200px) {
+
+@media (max-width: 600px) {
     table {
         border-spacing:5px 5px;
     }
-    
+
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+    table {
+        border-spacing:20px 20px;
+    }
 }
 
 /**********************************************************************************
@@ -41,6 +48,7 @@ table {
 
 .text-white {color:white;}
 .text-gray {color:gray;}
+.text-light-gray { color: #C5C5C5; }
 .text-green {color:#91AF72;}
 .text-yellow {color: #FDC401;}
 .text-pink { color: #A64172; }
@@ -144,6 +152,10 @@ table {
     margin-left: 20px;
 }
 .mt-2 { margin-top: 20px;}
+.mr-2 { margin-right: 20px;}
+.ml-2 { margin-left: 20px;}
+
+.mt-4 { margin-top: 40px;}
 
 .h-20 {  
     height: 20px;
@@ -157,6 +169,13 @@ table {
 }
 .w-30 {  
     width: 30px;
+}
+
+
+.border-rounded-xs {
+    border-radius: 5px;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
 }
 
 .border-rounded-sm {
@@ -173,8 +192,12 @@ table {
 
 
 .border-white {
-    border: 1px solid white;
-  }
+    border: 3px solid white;
+}
+
+.border-light-gray {
+    border:3px solid #C5C5C5;;
+}
 
 
 /* Static height equal to height of main content block (content-scrollable) */
@@ -378,7 +401,7 @@ table {
     bottom: 30px;
     left: -90px;
     width:200px;
-    background-color: white;
+    background-color: #C5C5C5;
     color: gray;
     padding: 4px;
     border-radius: 10px;

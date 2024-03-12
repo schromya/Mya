@@ -6,7 +6,9 @@ populateData(awardData, "awards")
 
 populateTable(  [experienceData["experience"], projectData["projects"], educationData["education"], awardData["awards"]],
                 ["Experience", "Projects", "Education", "Awards"],
-                "timeTable", "keyTable")
+                "timeTable")
+populateSkillsTable(  [experienceData["experience"], projectData["projects"]],
+                    "skillsTable")
 
 // Data is json, ID has to be ul component ID and first json key
 function populateData(data, ID) {
@@ -63,7 +65,7 @@ function populateData(data, ID) {
 }
 
 
-function populateTable(dataList, dataLabels, ID , keyID) {
+function populateTable(dataList, dataLabels, ID) {
     let table = document.getElementById(ID)
 
     const YEARS = [2021, 2022, 2023, 2024]
@@ -79,9 +81,9 @@ function populateTable(dataList, dataLabels, ID , keyID) {
 
         tableElements[i].push(
             `
-            <th>
+            <td>
                 ${YEARS[i].toString()}
-            </th>
+            </td>
             `
         )
 
@@ -112,14 +114,14 @@ function populateTable(dataList, dataLabels, ID , keyID) {
                 if (YEARS[i] >= yearStart && YEARS[i] <= yearEnd) {
                     tableElements[i].push(
                         `
-                        <th class="bg-${COLORS[j]} h-20 w-20">
+                        <td class="bg-${COLORS[j]} border-rounded-xs h-20 w-20">
                             <div class="tooltip-wrap">
                                 <span class="text-${COLORS[j]}">.</span>
-                                <div class="tooltip-content">
+                                <div class="tooltip-content text-center">
                                     ${experience["title"]}
                                 </div>
                             </div>
-                        </th>
+                        </td>
                         `
                     )
                 }
@@ -146,10 +148,10 @@ function populateTable(dataList, dataLabels, ID , keyID) {
 
     //     row.innerHTML +=
     //     `
-    //     <th class="bg-${COLORS[i]}">
+    //     <td class="bg-${COLORS[i]}">
     //         <span class="text-md">${dataLabels[i].toString()}</span>
             
-    //     </th>
+    //     </td>
     //     `
 
     //     keyTable.appendChild(row);
@@ -157,3 +159,64 @@ function populateTable(dataList, dataLabels, ID , keyID) {
 
 
 }
+
+
+function populateSkillsTable(dataList, ID) {
+    let table = document.getElementById(ID)
+
+    const SKILLS = ["Python", "C/C++", "Javascript", "HTML/CSS", "Rust"]
+
+    // Style colors ( Number colors need to be >= number dataList elements) (need bg and text css)
+    const COLOR = "gray"
+
+    let tableElements = [] // Rows of Columns of elements
+
+    // Create data
+    for (let i = 0; i < SKILLS.length; i++) {
+        tableElements.push([])
+
+        tableElements[i].push(
+            `
+            <td>
+                ${SKILLS[i]}
+            </td>
+            `
+        )
+
+        for (let j = 0; j < dataList.length; j++ ) {
+            for (experience of dataList[j]) {
+
+
+                for (skill of experience["skills"]) {
+                    if (skill === SKILLS[i]) {
+                        tableElements[i].push(
+                            `
+                            <td class="bg-${COLOR} border-rounded-xs h-20 w-20">
+                                <div class="tooltip-wrap ">
+                                    <span class="text-${COLOR}">.</span>
+                                    <div class="tooltip-content text-center">
+                                        ${experience["title"]}
+                                    </div>
+                                </div>
+                            </td>
+                            `
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    // TODO: combine these into one
+
+    // Display data in graph
+    for (let i = 0; i < tableElements.length; i++) {
+        let row = document.createElement('tr')
+        for (let j = 0; j < tableElements[i].length; j++) {
+            row.innerHTML += tableElements[i][j]
+        }
+        table.appendChild(row);
+    }
+
+}
+

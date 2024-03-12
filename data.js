@@ -98,11 +98,21 @@ const experienceData = {
 const projectData = {
     "projects": [
         {
+            "title": "Frog Game Programmer",
+            "org": "",
+            "date": "Feb 2024 - Mar 2024",
+            "location": "Anchorage, AK",
+            "skills": ["Rust"],
+            "descriptions": [
+                "Programmed a command-line ASCII Frog Game in Rust as part of a Network and Security Project."
+            ]
+        },
+        {
             "title": "quayside.app Developer",
             "org": "",
             "date": "Jul 2023 - Present",
             "location": "Anchorage, AK",
-            "skills": ["Tailwind", "Javascript", "Python", "Django"],
+            "skills": ["HTML/CSS", "Javascript", "Python", "Django"],
             "descriptions": [
                 "Work as a full-stack developer on quayside.app which is project management tool designed to use natural-language- processing to answer the question ”What’s next?”. This tool is built on Django with Javascript and Tailwind CSS, backed by Google Cloud Provider and MongoDB.",
                 "Visit quayside.app to see it."
@@ -113,7 +123,7 @@ const projectData = {
             "org": "UAA College of Engineering",
             "date": "Aug 2022 - Present",
             "location": "Anchorage, AK",
-            "skills": ["C/C++", "Python", "Python", "Django", "Tailwind CSS"],
+            "skills": ["C/C++", "Python", "HTML/CSS"],
             "descriptions": [
                 "Design and build robots to compete in the VEX U competition. Program vision sensors and motors for the robots in C++ using the VEX API. Train a YOLO ML Model to localize game elements. Model mechanisms (including 3D printable parts) in Autodesk Fusion 360.",
                 "In Spring 2023, we won the VEX U Judges Award at Tigertown Showdown in Clemson, SC, won the VEX U Girl Powered Challenge, and Competed in the VEX U World Championship in Dallas, TX (a first for any Alaskan team).",
