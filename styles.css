@@ -135,6 +135,7 @@ table {
 }
 
 .mr-1 { margin-right: 10px;}
+.mt-1 { margin-top: 10px;}
 
 .m-2 {  
     margin-top: 20px;
@@ -142,6 +143,7 @@ table {
     margin-bottom: 20px;
     margin-left: 20px;
 }
+.mt-2 { margin-top: 20px;}
 
 .h-20 {  
     height: 20px;

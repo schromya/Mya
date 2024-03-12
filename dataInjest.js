@@ -19,7 +19,7 @@ function populateData(data, ID) {
         for (skill of single["skills"]) {
             skillsHTML += 
                 `
-                <span class="border-rounded-md  bg-yellow p-05 mr-1">
+                <span class="border-rounded-md bg-yellow p-05 mr-1 mt-1">
                     ${skill}
                 </span>
                 `
@@ -53,7 +53,7 @@ function populateData(data, ID) {
                 ${descriptionHTML}
             </div>
 
-            <div class="pt-1 pl-2 pb-4">
+            <div class="content-flex pt-1 pl-2 pb-4">
                 ${skillsHTML}
             </div>
             `

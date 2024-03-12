@@ -49,68 +49,70 @@
                 </div>
             </div>
 
-            <!---------------------------------------- RESUME ---------------------------------------->
-            <div class="bg-gray p-2 text-white text-md">
+            <!---------------------------------------- PORTFOLIO ---------------------------------------->
+            <div class="bg-gray text-white text-md">
                 <!---------------------------------------- NAV ---------------------------------------->
-                <div class=" content-center content-stick-top bg-gray pt-2">
+                <div class=" content-center content-stick-top bg-gray pt-2 pb-1">
 
-                   
                     <!-- <a href="#overviewSection" class="text-white">Overview</a> • -->
-                    <a href="#experienceSection" class="text-white bg-green p-05 border-rounded-sm">Experience</a> •
-                    <a href="#projectsSection" class="text-white bg-pink p-05 border-rounded-sm">Projects</a> •
-                    <a href="#educationSection" class="text-white bg-light-pink p-05 border-rounded-sm">Education</a> •
-                    <a href="#awardsSection" class="text-white bg-teal p-05 border-rounded-sm">Awards</a>
+                    <a href="#experienceSection" class="text-white bg-green p-05  border-rounded-sm">Experience</a> •
+                    <a href="#projectsSection" class="text-white bg-pink p-05  border-rounded-sm">Projects</a> •
+                    <a href="#educationSection" class="text-white bg-light-pink p-05   border-rounded-sm">Education</a> •
+                    <a href="#awardsSection" class="text-white bg-teal p-05 border-rounded-sm ">Awards</a>
                 </div>
                 <br><br>
 
-                <!---------------------------------------- GRAPH ---------------------------------------->
-                <span class=" text-2xl text-bold pt-4" id="overviewSection"> Overview </span>
+                <!---------------------------------------- CONTENT ---------------------------------------->
+                <div class=" pl-2 pr-2">
 
-                <div class=" content-spread pb-5">
-                    <table class="text-white" id="timeTable"></table>
+                    <!---------------------------------------- GRAPH ---------------------------------------->
+                    <span class=" text-2xl text-bold pt-4" id="overviewSection"> Overview </span>
 
-                    <!-- <table class=" text-white " id="keyTable"></table> -->
+                    <div class=" content-spread pb-5">
+                        <table class="text-white" id="timeTable"></table>
+
+                        <!-- <table class=" text-white " id="keyTable"></table> -->
+                    </div>
+
+                    <!---------------------------------------- EXPERIENCE ---------------------------------------->
+                    <span class=" text-2xl text-bold pt-5" id="experienceSection"> Experience </span>
+                    <ul id="experience" class="text-sm p-0"></ul>
+
+                    <!---------------------------------------- PROJECTS ---------------------------------------->
+                    <span class=" text-2xl text-bold pt-4" id="projectsSection"> Projects & Leadership </span>
+                    <ul id="projects" class="text-sm p-0"></ul>
+
+                    <!---------------------------------------- EDUCATION ---------------------------------------->
+                    <span class="text-2xl text-bold pt-4" id="educationSection"> Education </span>
+                    <ul id="education" class="text-sm p-0"></ul>
+
+                    <!---------------------------------------- ACHIEVEMENTS ---------------------------------------->
+                    <span class="text-2xl text-bold pt-4" id="awardsSection"> Awards & Competitions</span>
+                    <ul id="awards" class="text-sm p-0"></ul>
+
                 </div>
-
-                <!---------------------------------------- EXPERIENCE ---------------------------------------->
-                <span class=" text-2xl text-bold pt-5" id="experienceSection"> Experience </span>
-                <ul id="experience" class="text-sm p-0"></ul>
-
-                <!---------------------------------------- PROJECTS ---------------------------------------->
-                <span class=" text-2xl text-bold pt-4" id="projectsSection"> Projects & Leadership </span>
-                <ul id="projects" class="text-sm p-0"></ul>
-
-                <!---------------------------------------- EDUCATION ---------------------------------------->
-                <span class="text-2xl text-bold pt-4" id="educationSection"> Education </span>
-                <ul id="education" class="text-sm p-0"></ul>
-
-                <!---------------------------------------- ACHIEVEMENTS ---------------------------------------->
-                <span class="text-2xl text-bold pt-4" id="awardsSection"> Awards & Competitions</span>
-                <ul id="awards" class="text-sm p-0"></ul>
 
             </div>
 
-        </div>
+            <!---------------------------------------- GAME ---------------------------------------->
+            <div class>
+                <!-- Game sprites controlled in javascript -->
 
-        <!---------------------------------------- GAME ---------------------------------------->
-        <div class>
-            <!-- Game sprites controlled in javascript -->
+                <div id="gameText" class="text-bold text-md text-gray"></div>
+                <img id="frog" class="img-lg">
+                <img id="shroom" class="img-lg">
+                <img id="gameOver" class="img-xl">
+                <div id="score" class="text-bold text-md text-gray"></div>
 
-            <div id="gameText" class="text-bold text-md text-gray"></div>
-            <img id="frog" class="img-lg">
-            <img id="shroom" class="img-lg">
-            <img id="gameOver" class="img-xl">
-            <div id="score" class="text-bold text-md text-gray"></div>
+            </div>
 
-        </div>
-
-        <!---------------------------------------- FOOTER ---------------------------------------->
-        <!-- <footer class="text-sm text-center content-stick-bottom p-2 ">
+            <!---------------------------------------- FOOTER ---------------------------------------->
+            <!-- <footer class="text-sm text-center content-stick-bottom p-2 ">
             Website designed and <a href="https://github.com/schromya/Mya" target="_blank">programmed</a> by Mya Schroder | 2024
         </footer> -->
 
-    </body>
-</html>
-<script src="gameLogic.js"></script>
-<script src="data.js"></script> <!-- Holds Resume Data -->
-<script src="dataInjest.js"></script>
+        </body>
+    </html>
+    <script src="gameLogic.js"></script>
+    <script src="data.js"></script> <!-- Holds Resume Data -->
+    <script src="dataInjest.js"></script>
