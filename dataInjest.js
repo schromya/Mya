@@ -1,8 +1,12 @@
 
-populateData(educationData, "education")
 populateData(experienceData, "experience")
 populateData(projectData, "projects")
+populateData(educationData, "education")
 populateData(awardData, "awards")
+
+populateTable(  [experienceData["experience"], projectData["projects"], educationData["education"], awardData["awards"]],
+                ["Experience", "Projects", "Education", "Awards"],
+                "timeTable", "keyTable")
 
 // Data is json, ID has to be ul component ID and first json key
 function populateData(data, ID) {
@@ -15,7 +19,7 @@ function populateData(data, ID) {
         for (skill of single["skills"]) {
             skillsHTML += 
                 `
-                <span class="rounded-md bg-yellow p-05 mr-1">
+                <span class="border-rounded-md  bg-yellow p-05 mr-1">
                     ${skill}
                 </span>
                 `
@@ -56,4 +60,109 @@ function populateData(data, ID) {
         element.appendChild(item)
 
     }
+}
+
+
+function populateTable(dataList, dataLabels, ID , keyID) {
+    let table = document.getElementById(ID)
+
+    const YEARS = [2021, 2022, 2023, 2024]
+
+    // Style colors ( Number colors need to be >= number dataList elements) (need bg and text css)
+    const COLORS = ["green", "pink", "yellow", "teal"]
+
+    let tableElements = [] // Rows of Columns of elements
+
+    // Create data
+    for (let i = 0; i < YEARS.length; i++) {
+        tableElements.push([])
+
+        tableElements[i].push(
+            `
+            <th>
+                ${YEARS[i].toString()}
+            </th>
+            `
+        )
+
+        for (let j = 0; j < dataList.length; j++ ) {
+            for (experience of dataList[j]) {
+                
+                /* Parses start and end year. Handles following formats:
+                    Aug 2021 - May 2024
+                    Aug 2021
+                    Aug 2021 - present
+                */
+
+                let parts = experience["date"].split(" ")
+                let yearStart = parseInt(parts[1], 10)
+
+
+                let yearEnd
+                if (parts.length == 2) {
+                    yearEnd = yearStart
+                }else if (parts.length == 4) {
+                    let currentDate = new Date()
+                    let currentYear = currentDate.getFullYear()
+                    yearEnd = currentYear
+                } else {
+                    yearEnd = parseInt(parts[4], 10)
+                }
+
+                if (YEARS[i] >= yearStart && YEARS[i] <= yearEnd) {
+                    tableElements[i].push(
+                        `
+                        <th class="bg-${COLORS[j]} h-20 w-20">
+                            <div class="tooltip-wrap">
+                                <span class="text-${COLORS[j]}">.</span>
+                                <div class="tooltip-content">
+                                    ${experience["title"]}
+                                </div>
+                            </div>
+                        </th>
+                        `
+                    )
+                }
+            }
+        }
+    }
+
+    // TODO: combine these into one
+
+    // Display data in graph
+    for (let i = 0; i < tableElements.length; i++) {
+        let row = document.createElement('tr')
+        for (let j = 0; j < tableElements[i].length; j++) {
+            row.innerHTML += tableElements[i][j]
+        }
+        table.appendChild(row);
+    }
+
+
+    // Make Key Table
+    let keyTable = document.getElementById(keyID)
+
+
+
+    for (let i = 0; i < dataLabels.length; i++ ) {
+        let row = document.createElement('tr')
+        row.innerHTML +=
+            `
+            <th>
+                ${dataLabels[i].toString()}
+            </th>
+            `
+        row.innerHTML +=
+
+        `
+        <th class="bg-${COLORS[i]} h-20 w-20">
+            <span class="text-${COLORS[i]}">.</span>
+        </th>
+        `
+
+        keyTable.appendChild(row);
+
+    }
+
+
 }

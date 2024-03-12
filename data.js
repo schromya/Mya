@@ -7,6 +7,7 @@ const educationData = {
             "location": "Anchorage, AK",
             "skills": ["GPA: 4.0"],
             "descriptions": []
+            
         },
 
         {
@@ -18,7 +19,7 @@ const educationData = {
             "descriptions": []
         },
         {
-            "title": "Cloud Practicioner Certificate",
+            "title": "Cloud Practitioner Certificate",
             "org": "Amazon Web Services",
             "date": "Aug 2022",
             "location": "Seattle, WA",
