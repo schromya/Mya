@@ -117,6 +117,7 @@ table {
 
 .pt-4 { padding-top: 40px;}
 .pb-4 {padding-bottom: 40px;}
+.pl-4 {padding-left: 40px;}
 
 
 .pt-5 { padding-top: 50px;}
@@ -156,6 +157,9 @@ table {
 .ml-2 { margin-left: 20px;}
 
 .mt-4 { margin-top: 40px;}
+.ml-4 { margin-left: 40px;}
+
+.ml-5 { margin-left: 50px;}
 
 .h-20 {  
     height: 20px;
