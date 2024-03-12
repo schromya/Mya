@@ -10,6 +10,17 @@ a {
     color: gray;
 }
 
+table {
+    border-spacing:30px 30px;
+}
+
+@media (max-width: 1200px) {
+    table {
+        border-spacing:5px 5px;
+    }
+    
+}
+
 /**********************************************************************************
     TEXT
 ***********************************************************************************/
@@ -33,6 +44,7 @@ a {
 .text-green {color:#91AF72;}
 .text-yellow {color: #FDC401;}
 .text-pink { color: #A64172; }
+.text-light-pink {color: #DCA8C4}
 .text-red { color: #99082B; }
 .text-teal {color: #32A2BB;}
 
@@ -134,9 +146,15 @@ a {
 .h-20 {  
     height: 20px;
 }
+.h-30 {  
+    height: 30px;
+}
 
 .w-20 {  
     width: 20px;
+}
+.w-30 {  
+    width: 30px;
 }
 
 .border-rounded-sm {
@@ -267,6 +285,7 @@ a {
 .bg-yellow { background: #FDC401; }
 .bg-green { background: #91AF72; }
 .bg-pink { background: #A64172; }
+.bg-light-pink {background: #DCA8C4}
 .bg-red { background: #99082B; }
 .bg-teal {background: #32A2BB;}
 
@@ -367,3 +386,5 @@ a {
 .tooltip-wrap:hover .tooltip-content {
     display: block;
 }
+
+

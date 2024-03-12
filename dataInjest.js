@@ -69,7 +69,7 @@ function populateTable(dataList, dataLabels, ID , keyID) {
     const YEARS = [2021, 2022, 2023, 2024]
 
     // Style colors ( Number colors need to be >= number dataList elements) (need bg and text css)
-    const COLORS = ["green", "pink", "yellow", "teal"]
+    const COLORS = ["green", "pink", "light-pink", "teal"]
 
     let tableElements = [] // Rows of Columns of elements
 
@@ -139,30 +139,21 @@ function populateTable(dataList, dataLabels, ID , keyID) {
     }
 
 
-    // Make Key Table
-    let keyTable = document.getElementById(keyID)
+    // // Make Key Table
+    // let keyTable = document.getElementById(keyID)
+    // for (let i = 0; i < dataLabels.length; i++ ) {
+    //     let row = document.createElement('tr')
 
+    //     row.innerHTML +=
+    //     `
+    //     <th class="bg-${COLORS[i]}">
+    //         <span class="text-md">${dataLabels[i].toString()}</span>
+            
+    //     </th>
+    //     `
 
-
-    for (let i = 0; i < dataLabels.length; i++ ) {
-        let row = document.createElement('tr')
-        row.innerHTML +=
-            `
-            <th>
-                ${dataLabels[i].toString()}
-            </th>
-            `
-        row.innerHTML +=
-
-        `
-        <th class="bg-${COLORS[i]} h-20 w-20">
-            <span class="text-${COLORS[i]}">.</span>
-        </th>
-        `
-
-        keyTable.appendChild(row);
-
-    }
+    //     keyTable.appendChild(row);
+    // }
 
 
 }
