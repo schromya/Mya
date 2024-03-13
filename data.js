@@ -108,7 +108,8 @@ const projectData = {
             "descriptions": [
                 "Programmed a command-line ASCII Frog Game in Rust as part of a Network and Security Project."
             ],
-            "gitLink": "https://github.com/schromya/FroggySecurity"
+            "gitLink": "https://github.com/schromya/FroggySecurity",
+            "image": "static/RustDemo.gif"
         },
         {
             "title": "quayside.app Developer",
@@ -121,7 +122,8 @@ const projectData = {
                 "Visit quayside.app to see it."
             ],
             "link": "http://quayside.app/",
-            "gitLink": "https://github.com/quayside-app/quayside"
+            "gitLink": "https://github.com/quayside-app/quayside",
+            "image": "static/quayside.png"
         },
         {
             "title": "UAA Robotics President",
@@ -136,7 +138,8 @@ const projectData = {
                 "Crafted the front end of our website using HTML, and Tailwind CSS."
             ],
             "link": "https://www.uaarobotics.com/",
-            "gitLink": "https://github.com/UAA-Robo"
+            "gitLink": "https://github.com/UAA-Robo",
+            "image": "static/robo.png"
         },
         {
             "title": "UAA Society of Women Engineers President",

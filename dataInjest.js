@@ -53,38 +53,56 @@ function populateData(data, ID) {
                 `
         }
 
+        let flexType=""
+        let imageHTML = ""
+        if(single["image"]) {
+            imageHTML = 
+                `
+                <img src="${single["image"]}" class="img-4xl img-frog-clip">
+                `
+            flexType = "content-flex"
+        }
+
 
 
         let item = document.createElement('div')
 
         item.innerHTML = 
             `
-            <div class="content-spread">
-                <span> <b>${single["title"]}</b> </span>
-                <span>${single["date"]}</span>
+            <div class="${flexType}">
+                <div class="pr-2">
+                    <div class="content-spread">
+                        <span> <b>${single["title"]}</b> </span>
+                        <span>${single["date"]}</span>
+                    </div>
+
+
+                    <div class="content-spread text-italic">
+                        <span>${single["org"]} </span>
+                    </div>
+
+
+
+                    <div class="content-spread pl-2">
+                        ${descriptionHTML}
+                    </div>
+
+                    <div class ="pl-2">
+
+                    </div>
+
+                    <div class="content-flex pt-1 pl-2 pb-4">
+                        ${gitLinkHTML}
+                        ${linkHTML}
+                        ${skillsHTML}
+                    </div>
+                </div>
+
+                <div class="content-center">
+                    ${imageHTML}
+                </div>
+
             </div>
-
-
-            <div class="content-spread text-italic">
-                <span>${single["org"]} </span>
-            </div>
-
-
-
-            <div class="content-spread pl-2">
-                ${descriptionHTML}
-            </div>
-
-            <div class ="pl-2">
-
-            </div>
-
-            <div class="content-flex pt-1 pl-2 pb-4">
-                ${gitLinkHTML}
-                ${linkHTML}
-                ${skillsHTML}
-            </div>
-
 
             `
         element.appendChild(item)

@@ -13,3 +13,8 @@ Welcome to my portfolio website code!
 - Tooltip:
   - https://stackoverflow.com/questions/11683620/how-to-display-pop-up-text-on-mouse-hover
   - https://www.altcademy.com/blog/how-to-get-current-year-in-javascript/#:~:text=To%20get%20the%20current%20year%2C%20we%20can%20use%20the%20getFullYear,Date()%3B%20let%20currentYear%20%3D%20currentDate.
+- Image Masks/Clips: 
+  - https://css-tricks.com/clipping-masking-css/
+
+- Converting svg path to polygon (needed to get coords for image mask):
+  - https://betravis.github.io/shape-tools/path-to-polygon/
