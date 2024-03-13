@@ -93,38 +93,26 @@ const experienceData = {
                 "Prioritized Operational Excellence, Cost Optimization, and Reliability."
             ]
         },
+        {
+            "title": "Plasma Physics Researcher",
+            "org": "UAA Plasma Physics Laboratory",
+            "date": "Sep 2021 - Apr 2022",
+            "location": "Anchorage, AK",
+            "skills": ["TechX VSim"],
+            "descriptions": [
+                "Researched behavior of quasi-neutral to non-neutral plasma confined within a Multipole Plasma Trap (MPT) as part of the Alaska Space Grant Program Early Career Undergraduate Research Apprenticeship.",
+                "Won Best-in-Show poster: Schroder, M., Hicks, N. (2022, April 8). Simulated Energy Analyzer Measurements of a Charged Particle Beam Under Adiabatic and Non-adiabatic Reflections from a Multipole Plasma Trap Field [Poster presentation]. Alaska Space Grant Symposium, Juneau, AK, United States."
+            ],
+
+            "image": "static/Plasma.png",
+            "link": "https://drive.google.com/file/d/1WKuBSalsdkImyzIBPYUX13K42VPht4wV/view?usp=sharing"
+        },
 
     ]
 };
 
 const projectData = {
     "projects": [
-        {
-            "title": "Frog Game Programmer",
-            "org": "",
-            "date": "Feb 2024 - Mar 2024",
-            "location": "Anchorage, AK",
-            "skills": ["Rust"],
-            "descriptions": [
-                "Programmed a command-line ASCII Frog Game in Rust as part of a Network and Security Project."
-            ],
-            "gitLink": "https://github.com/schromya/FroggySecurity",
-            "image": "static/RustDemo.gif"
-        },
-        {
-            "title": "quayside.app Developer",
-            "org": "",
-            "date": "Jul 2023 - Present",
-            "location": "Anchorage, AK",
-            "skills": ["HTML/CSS", "Javascript", "Python", "Django"],
-            "descriptions": [
-                "Work as a full-stack developer on quayside.app which is project management tool designed to use natural-language- processing to answer the question ”What’s next?”. This tool is built on Django with Javascript and Tailwind CSS, backed by Google Cloud Provider and MongoDB.",
-                "Visit quayside.app to see it."
-            ],
-            "link": "http://quayside.app/",
-            "gitLink": "https://github.com/quayside-app/quayside",
-            "image": "static/quayside.png"
-        },
         {
             "title": "UAA Robotics President",
             "org": "UAA College of Engineering",
@@ -141,6 +129,47 @@ const projectData = {
             "gitLink": "https://github.com/UAA-Robo",
             "image": "static/robo.png"
         },
+        {
+            "title": "quayside.app Developer",
+            "org": "",
+            "date": "Jul 2023 - Present",
+            "location": "Anchorage, AK",
+            "skills": ["HTML/CSS", "Javascript", "Python", "Django"],
+            "descriptions": [
+                "Work as a full-stack developer on quayside.app which is project management tool designed to use natural-language- processing to answer the question ”What’s next?”. This tool is built on Django with Javascript and Tailwind CSS, backed by Google Cloud Provider and MongoDB.",
+                "Visit quayside.app to see it."
+            ],
+            "link": "http://quayside.app/",
+            "gitLink": "https://github.com/quayside-app/quayside",
+            "image": "static/quayside.png"
+        },
+        {
+            "title": "Frog Game Programmer",
+            "org": "",
+            "date": "Feb 2024 - Mar 2024",
+            "location": "Anchorage, AK",
+            "skills": ["Rust"],
+            "descriptions": [
+                "Programmed a command-line ASCII Frog Game in Rust as part of a Network and Security Project."
+            ],
+            "gitLink": "https://github.com/schromya/FroggySecurity",
+            "image": "static/RustDemo.gif"
+        },
+
+        {
+            "title": "Computer Networks Researcher",
+            "org": "UAA Department of Computer Science and Engineering",
+            "date": "Sep 2023 - Dec 2023",
+            "location": "Anchorage, AK",
+            "skills": ["Python"],
+            "descriptions": [
+                "Researched Low Earth Orbiting Inter-Satellite Link (ISL) static routing typologies.",
+                "Simulated Sparse, +Grid, and Extended +Grid ISL typologies in python. Our group’s findings are currently being reviewed for publication in IEEE Access."
+            ],
+            "gitLink": "https://github.com/schromya/LEO",
+            "image": "static/NetworksDemo.gif"
+        },
+
         {
             "title": "UAA Society of Women Engineers President",
             "org": "UAA College of Engineering",

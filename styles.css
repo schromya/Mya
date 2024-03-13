@@ -283,8 +283,8 @@ table {
 }
 
 .img-4xl {
-    width:400px;
-    height:400px;
+    width:auto;
+    height:250px;
     object-fit: cover;
 }
 
@@ -305,8 +305,7 @@ table {
     }
 
     .img-4xl {
-        width: 250px;
-        height:250px;
+        height:150px;
     }
     
 }

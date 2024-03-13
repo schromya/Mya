@@ -58,7 +58,7 @@ function populateData(data, ID) {
         if(single["image"]) {
             imageHTML = 
                 `
-                <img src="${single["image"]}" class="img-4xl img-frog-clip">
+                <img src="${single["image"]}" class="img-4xl border-rounded-sm">
                 `
             flexType = "content-flex"
         }
@@ -69,7 +69,7 @@ function populateData(data, ID) {
 
         item.innerHTML = 
             `
-            <div class="${flexType}">
+            <div class="${flexType} pb-2">
                 <div class="pr-2">
                     <div class="content-spread">
                         <span> <b>${single["title"]}</b> </span>
@@ -91,14 +91,14 @@ function populateData(data, ID) {
 
                     </div>
 
-                    <div class="content-flex pt-1 pl-2 pb-4">
+                    <div class="content-flex pt-1 pl-2 pb-1">
                         ${gitLinkHTML}
                         ${linkHTML}
                         ${skillsHTML}
                     </div>
                 </div>
 
-                <div class="content-center">
+                <div class="content-center pb-2">
                     ${imageHTML}
                 </div>
 
