@@ -107,7 +107,8 @@ const projectData = {
             "skills": ["Rust"],
             "descriptions": [
                 "Programmed a command-line ASCII Frog Game in Rust as part of a Network and Security Project."
-            ]
+            ],
+            "gitLink": "https://github.com/schromya/FroggySecurity"
         },
         {
             "title": "quayside.app Developer",
@@ -132,8 +133,10 @@ const projectData = {
                 "Design and build robots to compete in the VEX U competition. Program vision sensors and motors for the robots in C++ using the VEX API. Train a YOLO ML Model to localize game elements. Model mechanisms (including 3D printable parts) in Autodesk Fusion 360.",
                 "In Spring 2023, we won the VEX U Judges Award at Tigertown Showdown in Clemson, SC, won the VEX U Girl Powered Challenge, and Competed in the VEX U World Championship in Dallas, TX (a first for any Alaskan team).",
                 "Increased club membership by almost 5 times that of the previous season. Implemented a task-base structure to manage the team and prioritize documentation.",
-                "Crafted the front end of uaarobotics.com using HTML, and Tailwind CSS."
-            ]
+                "Crafted the front end of our website using HTML, and Tailwind CSS."
+            ],
+            "link": "https://www.uaarobotics.com/",
+            "gitLink": "https://github.com/UAA-Robo"
         },
         {
             "title": "UAA Society of Women Engineers President",
