@@ -40,8 +40,10 @@ const experienceData = {
             "location": "Anchorage, AK",
             "skills": ["Python", "PyQT5", "PostgreSQL"],
             "descriptions": [
-                "Create a Python program to automate imaging of tree cores that interfaces with AmCam microscope SDK and an Arduino connected to a motor. The program has a GUI created using PyQT5. Documentation in-progress at uaa-robo.github.io/tree-ring."
-            ]
+                "Create a Python program to automate imaging of tree cores that interfaces with AmCam microscope SDK and an Arduino connected to a motor. The program has a GUI created using PyQT5."
+            ],
+            "link": "https://uaa-robo.github.io/tree-ring",
+            "gitLink": " https://github.com/UAA-Robo/tree-ring"
         },
         {
             "title": "Data Processing Developer",
@@ -116,7 +118,9 @@ const projectData = {
             "descriptions": [
                 "Work as a full-stack developer on quayside.app which is project management tool designed to use natural-language- processing to answer the question ”What’s next?”. This tool is built on Django with Javascript and Tailwind CSS, backed by Google Cloud Provider and MongoDB.",
                 "Visit quayside.app to see it."
-            ]
+            ],
+            "link": "http://quayside.app/",
+            "gitLink": "https://github.com/quayside-app/quayside"
         },
         {
             "title": "UAA Robotics President",

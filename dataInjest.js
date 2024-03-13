@@ -37,6 +37,23 @@ function populateData(data, ID) {
             `
         }
 
+        let gitLinkHTML = ""
+        if(single["gitLink"]) {
+            gitLinkHTML = 
+                `
+                <a href="${single["gitLink"]}" target="_blank"> <img src="static/GithubLogoWhite.png" class="img-sm pr-2 pt-1"></a>
+                `
+        }
+
+        let linkHTML = ""
+        if(single["link"]) {
+            linkHTML = 
+                `
+                <a href="${single["link"]}" target="_blank"> <img src="static/Link.png" class="img-sm pr-2 pt-1"></a>
+                `
+        }
+
+
 
         let item = document.createElement('div')
 
@@ -63,8 +80,8 @@ function populateData(data, ID) {
             </div>
 
             <div class="content-flex pt-1 pl-2 pb-4">
-                <a href="" target="_blank"> <img src="static/Link.png" class="img-sm pr-2 pt-1"></a>
-                <a href="" target="_blank"> <img src="static/GithubLogoWhite.png" class="img-sm pr-2 pt-1"></a>
+                ${gitLinkHTML}
+                ${linkHTML}
                 ${skillsHTML}
             </div>
 
