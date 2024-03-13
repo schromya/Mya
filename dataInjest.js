@@ -4,9 +4,9 @@ populateData(projectData, "projects")
 populateData(educationData, "education")
 populateData(awardData, "awards")
 
-populateTable(  [experienceData["experience"], projectData["projects"], educationData["education"], awardData["awards"]],
-                ["Experience", "Projects", "Education", "Awards"],
-                "timeTable")
+// populateTable(  [experienceData["experience"], projectData["projects"], educationData["education"], awardData["awards"]],
+//                 ["Experience", "Projects", "Education", "Awards"],
+//                 "timeTable")
 populateSkillsTable(  [experienceData["experience"], projectData["projects"]],
                     "skillsTable")
 
@@ -178,7 +178,7 @@ function populateSkillsTable(dataList, ID) {
     const SKILLS = ["Python", "C/C++", "Javascript", "HTML/CSS", "Rust"]
 
     // Style colors ( Number colors need to be >= number dataList elements) (need bg and text css)
-    const COLOR = "gray"
+    const COLOR = "teal"
 
     let tableElements = [] // Rows of Columns of elements
 
