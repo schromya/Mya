@@ -47,17 +47,28 @@ function populateData(data, ID) {
                 <span>${single["date"]}</span>
             </div>
 
+
             <div class="content-spread text-italic">
                 <span>${single["org"]} </span>
             </div>
+
+
 
             <div class="content-spread pl-2">
                 ${descriptionHTML}
             </div>
 
+            <div class ="pl-2">
+
+            </div>
+
             <div class="content-flex pt-1 pl-2 pb-4">
+                <a href="" target="_blank"> <img src="static/Link.png" class="img-sm pr-2 pt-1"></a>
+                <a href="" target="_blank"> <img src="static/GithubLogoWhite.png" class="img-sm pr-2 pt-1"></a>
                 ${skillsHTML}
             </div>
+
+
             `
         element.appendChild(item)
 
