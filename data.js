@@ -127,7 +127,7 @@ const projectData = {
             ],
             "link": "https://www.uaarobotics.com/",
             "gitLink": "https://github.com/UAA-Robo",
-            "image": "static/robo.png"
+            "image": "static/Robo.png"
         },
         {
             "title": "quayside.app Developer",
