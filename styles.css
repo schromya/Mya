@@ -213,10 +213,10 @@ table {
 }
 
 
-/* Static height equal to height of main content block (content-scrollable) */
-.min-static-height {
-    min-height: calc(100vh - 280px);
-}
+/* Static height equal to height of main content block */
+.min-static-height {min-height: calc(100vh - 240px);}
+.static-height { height: calc(100vh - 240px);} /* Originally 280*/
+
 
 .content-spread {
     display: flex;
@@ -244,7 +244,7 @@ table {
 
 
 .content-scroll {
-    height: calc(100vh - 280px); /* Portion of the viewport height */
+    /* height: calc(100vh - 280px); Portion of the viewport height */
     overflow-y: auto; /* Enables vertical scrolling if needed */
     overflow-x: hidden; /* Disables horizontal scrolling */
 
