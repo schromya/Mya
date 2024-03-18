@@ -214,8 +214,8 @@ table {
 
 
 /* Static height equal to height of main content block */
-.min-static-height {min-height: calc(100vh - 240px);}
-.static-height { height: calc(100vh - 240px);} /* Originally 280*/
+.min-static-height {min-height: calc(100vh - 250px);}
+.static-height { height: calc(100vh - 250px);} /* Originally 280*/
 
 
 .content-spread {
