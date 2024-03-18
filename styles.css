@@ -156,6 +156,15 @@ table {
 .mr-2 { margin-right: 20px;}
 .ml-2 { margin-left: 20px;}
 
+/* Margin only shows on medium+ screens */
+.mr-3-md { margin-right: 30px;}
+.ml-3-md { margin-left: 30px;}
+@media (max-width: 600px) {
+    .mr-3-md { margin-right: 0px;}
+    .ml-3-md { margin-left: 0px;}
+}
+
+
 .mt-4 { margin-top: 40px;}
 .ml-4 { margin-left: 40px;}
 
@@ -262,7 +271,7 @@ table {
     .content-flex {
       flex-wrap: wrap;
     }
-  }
+}
 
 /**********************************************************************************
     Images
