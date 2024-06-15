@@ -164,6 +164,21 @@ table {
     .ml-3-md { margin-left: 0px;}
 }
 
+/* Margin only shows on medium+ screens */
+.mr-20-md { margin-right: 200;}
+.ml-20-md { margin-left: 200px;}
+@media (max-width: 600px) {
+    .mr-20-md  { margin-right: 0px;}
+    .ml-20-md { margin-left: 0px;}
+}
+@media (min-width: 600px) and (max-width: 1200px)  {
+    .mr-20-md  { margin-right: 20px;}
+    .ml-20-md { margin-left: 20px;}
+}
+
+
+
+
 
 .mt-4 { margin-top: 40px;}
 .ml-4 { margin-left: 40px;}
@@ -195,6 +210,20 @@ table {
     border-radius: 10px;
     -moz-border-radius: 10px; 
     -webkit-border-radius: 10px; 
+}
+
+/* No rounding at small screens */
+.border-rounded-sm-md {
+    border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px; 
+}
+@media (max-width: 600px) {
+    .border-rounded-sm-md  {     
+        border-radius: 0px;
+        -moz-border-radius: 0px; 
+        -webkit-border-radius: 0px; 
+    }
 }
 
 .border-rounded-md {
@@ -267,7 +296,7 @@ table {
 
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1800px) {
     .content-flex {
       flex-wrap: wrap;
     }

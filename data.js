@@ -34,13 +34,26 @@ const educationData = {
 const experienceData = {
     "experience": [
         {
+            "title": "IT Data & Analytics Intern",
+            "org": "ConcoPhillips",
+            "date": "May 2024 - Present",
+            "location": "Anchorage, AK",
+            "skills": ["Python", "SQL", "Aspentech SQLplus"],
+            "descriptions": [
+                "Migrate legacy Perl and AspenTech SQLplus code to Python as part of our Snowflake data modernization initiative.",
+                "Develop SQL scripts to aggregate data for analytical purposes."
+            ],
+            "link": "https://uaa-robo.github.io/tree-ring",
+            "gitLink": " https://github.com/UAA-Robo/tree-ring"
+        },
+        {
             "title": "Automation Developer",
             "org": "UAA Environment and Natural Resource Institute",
             "date": "Dec 2023 - Present",
             "location": "Anchorage, AK",
             "skills": ["Python", "PyQT5", "PostgreSQL"],
             "descriptions": [
-                "Create a Python program to automate imaging of tree cores that interfaces with AmCam microscope SDK and an Arduino connected to a motor. The program has a GUI created using PyQT5."
+                "Created a Python program to automate imaging of tree cores that interfaces with AmCam microscope SDK and an Arduino connected to a motor. The program's GUI was created using PyQT5."
             ],
             "link": "https://uaa-robo.github.io/tree-ring",
             "gitLink": " https://github.com/UAA-Robo/tree-ring"
