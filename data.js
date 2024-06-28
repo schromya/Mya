@@ -47,7 +47,7 @@ const experienceData = {
         {
             "title": "Automation Developer",
             "org": "UAA Environment and Natural Resource Institute",
-            "date": "Dec 2023 - Present",
+            "date": "Dec 2023 - May 2023",
             "location": "Anchorage, AK",
             "skills": ["Python", "PyQT5", "PostgreSQL"],
             "descriptions": [
@@ -125,22 +125,6 @@ const experienceData = {
 const projectData = {
     "projects": [
         {
-            "title": "UAA Robotics President",
-            "org": "UAA College of Engineering",
-            "date": "Aug 2022 - Present",
-            "location": "Anchorage, AK",
-            "skills": ["C/C++", "Python", "HTML/CSS"],
-            "descriptions": [
-                "Design and build robots to compete in the VEX U competition. Program vision sensors and motors for the robots in C++ using the VEX API. Train a YOLO ML Model to localize game elements. Model mechanisms (including 3D printable parts) in Autodesk Fusion 360.",
-                "In Spring 2023, we won the VEX U Judges Award at Tigertown Showdown in Clemson, SC, won the VEX U Girl Powered Challenge, and Competed in the VEX U World Championship in Dallas, TX (a first for any Alaskan team).",
-                "Increased club membership by almost 5 times that of the previous season. Implemented a task-base structure to manage the team and prioritize documentation.",
-                "Crafted the front end of our website using HTML, and Tailwind CSS."
-            ],
-            "link": "https://www.uaarobotics.com/",
-            "gitLink": "https://github.com/UAA-Robo",
-            "image": "static/Robo.png"
-        },
-        {
             "title": "quayside.app Developer",
             "org": "",
             "date": "Jul 2023 - Present",
@@ -153,6 +137,22 @@ const projectData = {
             "link": "http://quayside.app/",
             "gitLink": "https://github.com/quayside-app/quayside",
             "image": "static/quayside.png"
+        },
+        {
+            "title": "UAA Robotics President",
+            "org": "UAA College of Engineering",
+            "date": "Aug 2022 - May 2024",
+            "location": "Anchorage, AK",
+            "skills": ["C/C++", "Python", "HTML/CSS"],
+            "descriptions": [
+                "Designed and built robots to compete in the VEX U competition. Programmed vision sensors and motors for the robots in C++ using the VEX API. Trained a YOLO ML Model to localize game elements. Model mechanisms (including 3D printable parts) in Autodesk Fusion 360.",
+                "In Spring 2023, we won the VEX U Judges Award at Tigertown Showdown in Clemson, SC, won the VEX U Girl Powered Challenge, and Competed in the VEX U World Championship in Dallas, TX (a first for any Alaskan team).",
+                "Increased club membership by almost 5 times that of the previous season. Implemented a task-base structure to manage the team and prioritize documentation.",
+                "Crafted the front end of our website using HTML, and Tailwind CSS."
+            ],
+            "link": "https://www.uaarobotics.com/",
+            "gitLink": "https://github.com/UAA-Robo",
+            "image": "static/Robo.png"
         },
         {
             "title": "Frog Game Programmer",
