@@ -43,8 +43,6 @@ const experienceData = {
                 "Migrate legacy Perl and AspenTech SQLplus code to Python as part of our Snowflake data modernization initiative.",
                 "Develop SQL scripts to aggregate data for analytical purposes."
             ],
-            "link": "https://uaa-robo.github.io/tree-ring",
-            "gitLink": " https://github.com/UAA-Robo/tree-ring"
         },
         {
             "title": "Automation Developer",
