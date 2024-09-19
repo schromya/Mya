@@ -1,6 +1,15 @@
 const educationData = {
     "education": [
         {
+            "title": "M.S. in Computer Science",
+            "org": "University of Wisconsin Madison (UW-Madison)",
+            "date": "Aug 2024 - Present",
+            "location": "Madison, WI",
+            "skills": [],
+            "descriptions": []
+            
+        },
+        {
             "title": "B.S. in Computer Science and Computer Systems Engineering",
             "org": "University of Alaska Anchorage (UAA)",
             "date": "Aug 2021 - May 2024",
@@ -34,14 +43,27 @@ const educationData = {
 const experienceData = {
     "experience": [
         {
+            "title": "Human-Robot Interaction Researcher",
+            "org": "UW-Madison People & Robots Lab",
+            "date": "Aug 2024 - Present",
+            "location": "Madison, WI",
+            "skills": ["ROS", "C/C++", "Python"],
+            "descriptions": [
+                "Program a 6-DOF Franka Emika Panda Robotic Arm to implement visualization techniques and Inverse Kinematics for pick-and-place grasping tasks.",
+                "Plan for the HAND ERC, a project that will research dextrous robot manipulation starting November."
+            ],
+            "link": "https://hand-erc.org/",
+        },
+        {
             "title": "IT Data & Analytics Intern",
             "org": "ConcoPhillips",
-            "date": "May 2024 - Present",
+            "date": "May 2024 - Jul 2024",
             "location": "Anchorage, AK",
-            "skills": ["Python", "SQL", "Aspentech SQLplus"],
+            "skills": ["Python", "SQL", "Aspentech SQLplus","Perl"],
             "descriptions": [
-                "Migrate legacy Perl and AspenTech SQLplus code to Python as part of our Snowflake data modernization initiative.",
-                "Develop SQL scripts to aggregate data for analytical purposes."
+                "Migrated legacy Perl and AspenTech SQLplus code to Python as part of our Snowflake data modernization initiative. Resulted in a 20x reduction in code volume and more maintainable code.",
+                "Developed SQL scripts to aggregate over 104 GB worth of data to enable reservoir forecasting and Closed-Loop Reservoir Management (CLRM).",
+                "Merged 3 sources of Well Header information into 1 using a conforming dimension model and trust factor ranking. This integration eliminated tedious, menial tasks and freed up human resources."
             ],
         },
         {
@@ -148,10 +170,11 @@ const projectData = {
                 "Designed and built robots to compete in the VEX U competition. Programmed vision sensors and motors for the robots in C++ using the VEX API. Trained a YOLO ML Model to localize game elements. Model mechanisms (including 3D printable parts) in Autodesk Fusion 360.",
                 "In Spring 2023, we won the VEX U Judges Award at Tigertown Showdown in Clemson, SC, won the VEX U Girl Powered Challenge, and Competed in the VEX U World Championship in Dallas, TX (a first for any Alaskan team).",
                 "Increased club membership by almost 5 times that of the previous season. Implemented a task-base structure to manage the team and prioritize documentation.",
-                "Crafted the front end of our website using HTML, and Tailwind CSS."
+                "Crafted the front end of our website using HTML, and Tailwind CSS.",
+                "Since Fall 2022, we outreached to over 500 youth and 200 guardians through Soldering, 3D-printing, and RC-Car workshops, and through local community events like UAA STEM Day."
             ],
             "link": "https://www.uaarobotics.com/",
-            "gitLink": "https://github.com/UAA-Robo",
+            "gitLink": "https://uaa-robo.github.io/UAA-Robotics-Website",
             "image": "static/Robo.png"
         },
         {
@@ -175,7 +198,7 @@ const projectData = {
             "skills": ["Python"],
             "descriptions": [
                 "Researched Low Earth Orbiting Inter-Satellite Link (ISL) static routing typologies.",
-                "Simulated Sparse, +Grid, and Extended +Grid ISL typologies in python. Our group’s findings are currently being reviewed for publication in IEEE Access."
+                "Simulated Sparse, +Grid, and Extended +Grid ISL typologies in python."
             ],
             "gitLink": "https://github.com/schromya/LEO",
             "image": "static/NetworksDemo.gif"
@@ -190,7 +213,6 @@ const projectData = {
             "descriptions": [
                 "Initiated “Stem Skill Sessions” to teach the UAA community practical skills. The first session in the Fall 2022 semester covered Soldering, which 40+ UAA students signed up for. The next sessions included 3D printing and App programming.",
                 "Organized Q/A sessions with STEM professionals and the networking event, Women in Engineering Night.",
-                "Increased club membership by almost 5 times that of the previous season. Implemented a task-base structure to manage the team and prioritize documentation.",
                 "Connected members with STEM related volunteer opportunities (including UAA STEM Day)."
             ]
         },

@@ -210,7 +210,7 @@ function populateTable(dataList, dataLabels, ID) {
 function populateSkillsTable(dataList, ID) {
     let table = document.getElementById(ID)
 
-    const SKILLS = ["Python", "C/C++", "Javascript", "HTML/CSS", "Rust"]
+    const SKILLS = ["ROS", "Python", "C/C++", "Javascript", "HTML/CSS", "Rust"]
 
     // Style colors ( Number colors need to be >= number dataList elements) (need bg and text css)
     const COLOR = "teal"
