@@ -49,11 +49,12 @@ const experienceData = {
             "location": "Madison, WI",
             "skills": ["ROS", "C/C++", "Python"],
             "descriptions": [
-                "Program a 6-DOF Franka Emika Panda Robotic Arm to implement visualization techniques and Inverse Kinematics for pick-and-place grasping tasks.",
+                "Program a 7-DOF Franka Emika Panda Robotic Arm to implement visualization techniques and Inverse Kinematics for pick-and-place grasping tasks.",
                 "Plan for the HAND ERC, a project that will research dextrous robot manipulation starting November."
             ],
             "link": "https://hand-erc.org/",
         },
+
         {
             "title": "IT Data & Analytics Intern",
             "org": "ConcoPhillips",
@@ -146,6 +147,21 @@ const experienceData = {
 
 const projectData = {
     "projects": [
+        {
+            "title": "Wisconsin Robotics Team Member",
+            "org": "UW-Madison",
+            "date": "Sep 2024 -  Present",
+            "location": "Madison, WI",
+            "skills": ["ROS 2", "Python", "Docker Containers"],
+            "descriptions": [
+                "Collaborated with the software team to compete in the University Rover Challenge.",
+                "Use ROS 2 to simulate, visualize, and optimize the rover's arm motion and functionality.",
+                "Apply Inverse Kinematics (IK) to control the rover's arm during user-controlled and autonomous portions of the competition.",
+            ],
+            "link": "https://wisconsinrobotics.org/",
+            "gitLink": "",
+            "image": ""
+        },
         {
             "title": "quayside.app Developer",
             "org": "",
