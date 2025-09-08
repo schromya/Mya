@@ -43,16 +43,27 @@ const educationData = {
 const experienceData = {
     "experience": [
         {
+            "title": "Robotics Software Engineering Intern",
+            "org": "Amazon Robotics",
+            "date": "May 2025 - Aug 2025",
+            "location": "Boston, MA",
+            "skills": ["ROS", "C/C++", "Python"],
+            "descriptions": [
+                "Designed and implemented a digital twin of the 7-DOF Franka Research 3 (FR3) robotic arm in IsaacSim using Isaac Lab, ensuring the same control logic operated both simulated and real hardware for near-identical performance. Developed custom motor motion controllers including a joint-torque PD controller with Coriolis, gravity, and friction compensation and Cartesian-torque controller with Drake inverse kinematics in C++. Implemented a high level ROS 2 interface for abstracted control. Added both teleoperated Xbox input and automated control modes.",
+                "Developed a Model Predictive Control (MPC)–based optimization controller to blend teleoperation and autonomy for the FR3 robotic arm, dynamically adjusting control based on distance to target objects. Implemented in Python with SciPy and integrated with ROS 2 through a custom wrapper."
+            ],
+        },
+        {
             "title": "Human-Robot Interaction Researcher",
             "org": "UW-Madison People & Robots Lab",
             "date": "Aug 2024 - Present",
             "location": "Madison, WI",
             "skills": ["ROS", "C/C++", "Python"],
             "descriptions": [
-                "Program a 7-DOF Franka Emika Panda Robotic Arm to implement visualization techniques and Inverse Kinematics for pick-and-place grasping tasks.",
-                "Plan for the HAND ERC, a project that will research dextrous robot manipulation starting November."
+                "Programmed a 7-DOF Franka Emika Panda robotic arm with an interface that tracked objects in the scene, displayed their locations to the user, and translated high-level natural language commands ('Bring me the cup') into low-level primitives (grasp, twist, etc.). Executed primitives on the robot through a Python and C++ implementation with ROS 1.",
+                "Currently developing an imitation learning pipeline for the Panda robotic arm equipped with a Tesollo 3-finger gripper to enable dexterous manipulation tasks."
             ],
-            "link": "https://hand-erc.org/",
+            "gitLink": "https://github.com/Wisc-HCI/dexterity-interface",
         },
 
         {
@@ -150,13 +161,13 @@ const projectData = {
         {
             "title": "Wisconsin Robotics Team Member",
             "org": "UW-Madison",
-            "date": "Sep 2024 -  Present",
+            "date": "Sep 2024 -  Feb 2025",
             "location": "Madison, WI",
-            "skills": ["ROS 2", "Python", "Docker Containers"],
+            "skills": ["ROS", "Python", "Docker Containers"],
             "descriptions": [
                 "Collaborated with the software team to compete in the University Rover Challenge.",
                 "Use ROS 2 to simulate, visualize, and optimize the rover's arm motion and functionality.",
-                "Apply Inverse Kinematics (IK) to control the rover's arm during user-controlled and autonomous portions of the competition.",
+                "Apply Inverse Kinematics (IK) to control the rover's arm during user-controlled and autonomous portions of the competition.Applied Inverse Kinematics (IK) using RangedIK in ROS 2 to control the rover’s robotic arm during user-controlled and autonomous competition tasks.",
             ],
             "link": "https://wisconsinrobotics.org/",
             "gitLink": "",
@@ -165,11 +176,11 @@ const projectData = {
         {
             "title": "quayside.app Developer",
             "org": "",
-            "date": "Jul 2023 - Present",
+            "date": "Jul 2023 - April 2025",
             "location": "Anchorage, AK",
             "skills": ["HTML/CSS", "Javascript", "Python", "Django"],
             "descriptions": [
-                "Work as a full-stack developer on quayside.app which is project management tool designed to use natural-language- processing to answer the question ”What’s next?”. This tool is built on Django with Javascript and Tailwind CSS, backed by Google Cloud Provider and MongoDB.",
+                "Worked as a full-stack developer on quayside.app which is project management tool designed to use natural-language- processing to answer the question ”What’s next?”. This tool is built on Django with Javascript and Tailwind CSS, backed by Google Cloud Provider and MongoDB.",
                 "Visit quayside.app to see it."
             ],
             "link": "http://quayside.app/",
@@ -189,8 +200,8 @@ const projectData = {
                 "Crafted the front end of our website using HTML, and Tailwind CSS.",
                 "Since Fall 2022, we outreached to over 500 youth and 200 guardians through Soldering, 3D-printing, and RC-Car workshops, and through local community events like UAA STEM Day."
             ],
-            "link": "https://www.uaarobotics.com/",
-            "gitLink": "https://uaa-robo.github.io/UAA-Robotics-Website",
+            "link": "https://uaa-robo.github.io/UAA-Robotics-Website/",
+            "gitLink": "https://github.com/UAA-Robo",
             "image": "static/Robo.png"
         },
         {
