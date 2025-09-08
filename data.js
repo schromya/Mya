@@ -50,7 +50,7 @@ const experienceData = {
             "skills": ["ROS", "C/C++", "Python"],
             "descriptions": [
                 "Designed and implemented a digital twin of the 7-DOF Franka Research 3 (FR3) robotic arm in IsaacSim using Isaac Lab, ensuring the same control logic operated both simulated and real hardware for near-identical performance. Developed custom motor motion controllers including a joint-torque PD controller with Coriolis, gravity, and friction compensation and Cartesian-torque controller with Drake inverse kinematics in C++. Implemented a high level ROS 2 interface for abstracted control. Added both teleoperated Xbox input and automated control modes.",
-                "Developed a Model Predictive Control (MPC)–based optimization controller to blend teleoperation and autonomy for the FR3 robotic arm, dynamically adjusting control based on distance to target objects. Implemented in Python with SciPy and integrated with ROS 2 through a custom wrapper."
+                "Developed a Model Predictive Control (MPC) - based optimization controller to blend teleoperation and autonomy for the FR3 robotic arm, dynamically adjusting control based on distance to target objects. Implemented Python with SciPy and integrated with ROS 2 through a custom wrapper."
             ],
         },
         {
@@ -166,8 +166,7 @@ const projectData = {
             "skills": ["ROS", "Python", "Docker Containers"],
             "descriptions": [
                 "Collaborated with the software team to compete in the University Rover Challenge.",
-                "Use ROS 2 to simulate, visualize, and optimize the rover's arm motion and functionality.",
-                "Apply Inverse Kinematics (IK) to control the rover's arm during user-controlled and autonomous portions of the competition.Applied Inverse Kinematics (IK) using RangedIK in ROS 2 to control the rover’s robotic arm during user-controlled and autonomous competition tasks.",
+                "Applied Inverse Kinematics (IK) to control the rover's arm during user-controlled and autonomous portions of the competition.Applied Inverse Kinematics (IK) using RangedIK in ROS 2 to control the rover’s robotic arm during user-controlled and autonomous competition tasks.",
             ],
             "link": "https://wisconsinrobotics.org/",
             "gitLink": "",
