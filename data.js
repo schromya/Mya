@@ -61,7 +61,7 @@ const experienceData = {
             "skills": ["ROS", "C/C++", "Python"],
             "descriptions": [
                 "Programmed a 7-DOF Franka Emika Panda robotic arm with an interface that tracked objects in the scene, displayed their locations to the user, and translated high-level natural language commands ('Bring me the cup') into low-level primitives (grasp, twist, etc.). Executed primitives on the robot through a Python and C++ implementation with ROS 1.",
-                "Currently developing an imitation learning pipeline for the Panda robotic arm equipped with a Tesollo 3-finger gripper to enable dexterous manipulation tasks."
+                "+ Currently extending this pipeline to work with the Panda robotic arm equipped with a Tesollo 3-finger gripper to enable dexterous manipulation tasks."
             ],
             "gitLink": "https://github.com/Wisc-HCI/dexterity-interface",
         },
