@@ -1,4 +1,4 @@
-const educationData = {
+export const educationData = {
     "education": [
         {
             "title": "M.S. in Computer Science",
@@ -40,7 +40,7 @@ const educationData = {
 };
 
 
-const experienceData = {
+export const experienceData = {
     "experience": [
         {
             "title": "Robotics Software Engineering Intern",
@@ -156,7 +156,7 @@ const experienceData = {
     ]
 };
 
-const projectData = {
+export const projectData = {
     "projects": [
         {
             "title": "Wisconsin Robotics Team Member",
@@ -246,7 +246,7 @@ const projectData = {
 };
 
 
-const awardData = {
+export const awardData = {
     "awards": [
         {
             "title": "Top Competitor in the IEEExtreme 24 hour Programming Competition",

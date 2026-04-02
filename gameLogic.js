@@ -1,3 +1,95 @@
+export function setupGame() {
+        
+    // Script
+
+    let xOffset = 0
+    let smallOffset = 0
+    let yOffset = 0
+
+
+    if (window.innerWidth <= 600) {
+        xOffset = 80
+        smallOffset = 35
+        yOffset = 60
+    }
+
+    const gameText = new Sprite(
+        'gameText', '', 'Press the space bar or tap to jump!',
+        50 - smallOffset, 85 , Direction.STOPPED, 
+        0, 0, 0, 0
+    )
+
+    const frog = new Sprite(
+        'frog', 'assets/FrogSit.png', '',
+        100 - xOffset, 0, Direction.UP, 
+        100, 100, 0, 200 - yOffset
+    )
+
+    // Start and end mushroom off screen
+    const shroom = new Sprite(
+        'shroom', 'assets/ShroomPink.png', '',
+        window.innerWidth , 0, Direction.LEFT, 
+        -100, window.innerWidth, 0, 0
+    )
+
+    // Start off screen and bring to screen when died
+    const gameOverText = new Sprite(
+        'gameOver', 'assets/GameOver.png', '',
+    -300, 20 , Direction.STOPPED, 
+    -300,  window.innerWidth/2 - 145/2, 0, 0
+    )
+
+    // Start off screen and bring to screen when died
+    const score = new Sprite(
+        'score', '', 'Score: 0',
+        window.innerWidth - 200 + xOffset, 85 , Direction.STOPPED, 
+        0, 0, 0, 0
+    )
+
+
+    const game = new Game()
+
+    game.trackSprite(frog)
+    game.trackSprite(shroom)
+
+    let state = { restart: false, enable: true };
+
+
+
+    // Jump frog when space bar pressed
+    document.addEventListener('keydown', function(event) {
+        state.restart = true;
+        if (event.key === ' ') {
+            event.preventDefault() // Prevent scrolling w/ spacebar
+            gameText.updateInnerContent('') // Take away content when start jumping
+            if (state.enable) moveFrog(frog);
+            state.enable = true;
+        }
+    });
+
+
+    // Jump frog when space bar or when the screen is tapped
+    document.addEventListener('touchstart', function(event) {
+        var touchY = event.touches[0].clientY;
+
+        // If touch the lower part of the screen, then register the tap
+        if (touchY >= window.innerHeight - 100) {
+            gameText.updateInnerContent('') // Take away content when start jumping
+            state.restart = true;
+
+            if (state.enable) moveFrog(frog);
+            state.enable = true;
+        }
+    });
+
+    // Start Shroom Movement
+    moveShroom(game, shroom, score);
+
+    // Start checking crash
+    checkCollision(game, frog, shroom, gameOverText, state);
+}
+
+
 
 // Arrows not really necessary but cool
 const Direction = Object.freeze({ 
@@ -165,144 +257,54 @@ class Game {
 
 
 
-// Script
-
-let xOffset = 0
-let smallOffset = 0
-let yOffset = 0
 
 
-if (window.innerWidth <= 600) {
-    xOffset = 80
-    smallOffset = 35
-    yOffset = 60
-}
-
-gameText = new Sprite(
-    'gameText', '', 'Press the space bar or tap to jump!',
-    50 - smallOffset, 85 , Direction.STOPPED, 
-    0, 0, 0, 0
-)
-
-frog = new Sprite(
-    'frog', 'assets/FrogSit.png', '',
-    100 - xOffset, 0, Direction.UP, 
-    100, 100, 0, 200 - yOffset
-)
-
-// Start and end mushroom off screen
-shroom = new Sprite(
-    'shroom', 'assets/ShroomPink.png', '',
-    window.innerWidth , 0, Direction.LEFT, 
-    -100, window.innerWidth, 0, 0
-)
-
-// Start off screen and bring to screen when died
-gameOverText = new Sprite(
-    'gameOver', 'assets/GameOver.png', '',
-   -300, 20 , Direction.STOPPED, 
-   -300,  window.innerWidth/2 - 145/2, 0, 0
-)
-
-// Start off screen and bring to screen when died
-score = new Sprite(
-    'score', '', 'Score: 0',
-    window.innerWidth - 200 + xOffset, 85 , Direction.STOPPED, 
-    0, 0, 0, 0
-)
-
-
-game = new Game()
-
-game.trackSprite(frog)
-game.trackSprite(shroom)
-
-let restart = false;
-
-let enable = true;
-
-
-
-// Jump frog when space bar pressed
-document.addEventListener('keydown', function(event) {
-    restart = true;
-    if (event.key === ' ') {
-        event.preventDefault() // Prevent scrolling w/ spacebar
-        gameText.updateInnerContent('') // Take away content when start jumping
-        if (enable) moveFrog(frog);
-        enable = true;
-    }
-});
-
-
-// Jump frog when space bar or when the screen is tapped
-document.addEventListener('touchstart', function(event) {
-    var touchY = event.touches[0].clientY;
-
-    // If touch the lower part of the screen, then register the tap 
-    if (touchY >= window.innerHeight - 100) {
-        gameText.updateInnerContent('') // Take away content when start jumping
-        restart = true;
-        
-        if (enable) moveFrog(frog);
-        enable = true;
-    }
-});
-
-// Start Shroom Movement
-moveShroom(shroom)
-
-// Start checking crash
-checkCollision()
 
 
 
 // Check crash + count score
-function checkCollision() {
+function checkCollision(game, frog, shroom, gameOverText, state) {
     setTimeout(function() {
-        
 
         // End game if collision
         if (game.isCollision(shroom)) {
-            restart = false
+            state.restart = false
             shroom.direction = Direction.STOPPED;
             frog.direction = Direction.STOPPED;
             frog.updateImage('assets/FrogDead.png')
             gameOverText.updateXPosition(gameOverText.MAX_X_POSITION)
-            enable = false;
+            state.enable = false;
 
-            checkRestart()
+            checkRestart(game, frog, shroom, gameOverText, state);
         }
 
-        checkCollision()
+        checkCollision(game, frog, shroom, gameOverText, state)
 
     }, 5); // Updates at half the speed of the other threads
 }
 
-function checkRestart() {
+function checkRestart(game, frog, shroom, gameOverText, state) {
     setTimeout(function() {
 
-        if (restart) {
+        if (state.restart) {
             frog.reset()
             frog.updateImage('assets/FrogSit.png')
             shroom.reset()
             gameOverText.reset()
             game.score = 0
-            
-        }else checkRestart()
+
+        } else checkRestart(game, frog, shroom, gameOverText, state)
 
     }, 5); // Updates at half the speed of the other threads
-
-
 }
 
 // Modify frog's position
-function moveFrog() {
+function moveFrog(frog) {
     // Call recursively forever
     setTimeout(function() {
         if (frog.direction !== Direction.STOPPED) {
             frog.updateImage('assets/FrogJump.png')
-            newYPos = frog.position[1]
+            let newYPos = frog.position[1]
             
             if (frog.direction === Direction.DOWN) newYPos -= 4
             else newYPos += 4.5
@@ -323,7 +325,7 @@ function moveFrog() {
 }
 
 // Modify Mushrooms position (And add points)
-function moveShroom() {
+function moveShroom(game, shroom, score) {
     // Call recursively forever
     setTimeout(function() {
 
@@ -338,7 +340,7 @@ function moveShroom() {
             shroom.updateXPosition(newXPosition)
             
         }
-        moveShroom(shroom);
+        moveShroom(game, shroom, score);
     }, 10); // Shroom updated every msec
     
 }

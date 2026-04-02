@@ -13,9 +13,10 @@
     <body class="m-0">
         <!---------------------------------------- Navbar ---------------------------------------->
         <nav class="content-spread">
-            <span class="text-bold text-lg text-gray p-2"> Mya Schroder </span>
+            <span id="homeNav" class="text-bold text-lg text-gray p-2"> Mya Schroder </span>
 
             <div class="p-2">
+                <a id="resumeNav"> <span class="text-bold"> Resume </span> </a>
                 <a href="mailto:schromya@gmail.com" target="_blank"> <img src="static/EmailLogo.png" class="img-sm img-gray"></a>
                 <a href="https://github.com/schromya" target="_blank"> <img src="static/GithubLogo.png" class="img-sm img-gray"></a>
                 <a href="https://linkedin.com/in/schromya" target="_blank"> <img src="static/LinkedinLogo.png" class="img-sm img-gray"></a>
@@ -23,109 +24,30 @@
 
         </nav>
 
-        <!---------------------------------------- BODY ---------------------------------------->
-        <div class='text-white content-scroll static-height'>
-            <!---------------------------------------- ABOUT ME ---------------------------------------->
-            <div class="  m-2 min-static-height">
+        <!---------------------------------------- BODY ---------------------------------------->\
+        <!-- FILLED BY JS -->
+        <div id="body"></div> 
+        
 
-                <div class="speech-bubble-box speech-bubble-triangle">
+        <!---------------------------------------- GAME ---------------------------------------->
+        <div class>
+            <!-- Game sprites controlled in javascript -->
 
-                    <div class="text-2xl text-bold"> Hey there!</div>
+            <div id="gameText" class="text-bold text-md text-gray"></div>
+            <img id="frog" class="img-lg">
+            <img id="shroom" class="img-lg">
+            <img id="gameOver" class="img-xl">
+            <div id="score" class="text-bold text-md text-gray"></div>
 
-                    <div class="text-lg">
-                        Welcome to Mya's personal website, where you can hop around, just like me, your friendly webpage frog!
-                        Mya is a <b>software engineer</b> who is currently working on <span class="text-yellow">robot dexterity</span> in the <span class="text-yellow">People and Robots Lab</span> at the UW-Madison.
-                        Before you go, be sure to play a game with me at the bottom of the page.
-                    </div>
-                </div>
+        </div>
 
-                <div class=" content-right">
-                    <img src="assets/FrogTalk.png" class="pb-2">
-                </div>
-            </div>
-
-            <!---------------------------------------- PORTFOLIO ---------------------------------------->
-            <div class="bg-gray ml-20-md mr-20-md text-md border-rounded-sm-md">
-                <!---------------------------------------- NAV ---------------------------------------->
-                <div class=" content-center content-stick-top pt-2 pb-1 border-rounded-sm-md">
-
-                    <!-- <a href="#overviewSection" class="text-white">Overview</a> • -->
-                    <a href="#experienceSection" class="text-white">Experience</a> •
-                    <a href="#projectsSection" class="text-white">Projects</a> •
-                    <a href="#educationSection" class="text-white">Education</a> •
-                    <a href="#awardsSection" class="text-white">Awards</a>
-                </div>
-                <br><br>
-
-                <!---------------------------------------- CONTENT ---------------------------------------->
-
-                <!---------------------------------------- GRAPHS ---------------------------------------->
-                <span class=" text-2xl text-bold pt-4 pl-2 " id="overviewSection"> Overview </span>
-
-                <div class=" content-flex pl-4 pb-5">
-
-                    <!-- <div class="bg-white ml-2 mt-2 border-rounded-sm">
-                        <table class="text-gray " id="timeTable"></table>
-
-
-                        <div class="content-center text-white text-md pb-1 pt-1">
-                            <span class="bg-green p-05 border-rounded-sm">Experience</span>
-                            <span class="bg-pink p-05 border-rounded-sm">Projects</span>
-                            <span class="bg-light-pink p-05 border-rounded-sm">Education</span>
-                            <span class="bg-teal p-05 border-rounded-sm">Awards</span>
-                        </div>
-                    </div> -->
-
-                    <div class="bg-white  mt-2 border-rounded-sm">
-                        <table class="text-gray" id="skillsTable"></table>
-
-                        <!--Axis-->
-                        <div class="content-center pb-1">
-                            <span class="text-gray pb-1">Project Count</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class=" pl-2 pr-2">
-                    <!---------------------------------------- EXPERIENCE ---------------------------------------->
-                    <span class=" text-2xl text-bold pt-5" id="experienceSection"> Experience </span>
-                    <ul id="experience" class="text-sm p-0"></ul>
-
-                    <!---------------------------------------- PROJECTS ---------------------------------------->
-                    <span class=" text-2xl text-bold pt-4" id="projectsSection"> Projects & Leadership </span>
-                    <ul id="projects" class="text-sm p-0"></ul>
-
-                    <!---------------------------------------- EDUCATION ---------------------------------------->
-                    <span class="text-2xl text-bold pt-4" id="educationSection"> Education </span>
-                    <ul id="education" class="text-sm p-0"></ul>
-
-                    <!---------------------------------------- ACHIEVEMENTS ---------------------------------------->
-                    <span class="text-2xl text-bold pt-4" id="awardsSection"> Awards & Competitions</span>
-                    <ul id="awards" class="text-sm p-0"></ul>
-
-                </div>
-
-            </div>
-
-            <!---------------------------------------- GAME ---------------------------------------->
-            <div class>
-                <!-- Game sprites controlled in javascript -->
-
-                <div id="gameText" class="text-bold text-md text-gray"></div>
-                <img id="frog" class="img-lg">
-                <img id="shroom" class="img-lg">
-                <img id="gameOver" class="img-xl">
-                <div id="score" class="text-bold text-md text-gray"></div>
-
-            </div>
-
-            <!---------------------------------------- FOOTER ---------------------------------------->
-            <!-- <footer class="text-sm text-center content-stick-bottom p-2 ">
+        <!---------------------------------------- FOOTER ---------------------------------------->
+        <!-- <footer class="text-sm text-center content-stick-bottom p-2 ">
             Website designed and <a href="https://github.com/schromya/Mya" target="_blank">programmed</a> by Mya Schroder | 2024
         </footer> -->
 
         </body>
     </html>
-    <script src="gameLogic.js"></script>
-    <script src="data.js"></script> <!-- Holds Resume Data -->
-    <script src="dataInjest.js"></script>
+    <script type="module" src="index.js"></script>
+
+ 

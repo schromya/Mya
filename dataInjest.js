@@ -1,24 +1,15 @@
 
-populateData(experienceData, "experience")
-populateData(projectData, "projects")
-populateData(educationData, "education")
-populateData(awardData, "awards")
 
-// populateTable(  [experienceData["experience"], projectData["projects"], educationData["education"], awardData["awards"]],
-//                 ["Experience", "Projects", "Education", "Awards"],
-//                 "timeTable")
-populateSkillsTable(  [experienceData["experience"], projectData["projects"]],
-                    "skillsTable")
 
 // Data is json, ID has to be ul component ID and first json key
-function populateData(data, ID) {
+export function populateData(data, ID) {
     let element = document.getElementById(ID)
 
     // TODO rename single to better name when I have more braincells
     for (let single of data[ID]) {
 
         let skillsHTML = ""
-        for (skill of single["skills"]) {
+        for (let skill of single["skills"]) {
             skillsHTML += 
                 `
                 <span class="border-rounded-md bg-yellow p-05 mr-1 mt-1">
@@ -111,7 +102,7 @@ function populateData(data, ID) {
 }
 
 
-function populateTable(dataList, dataLabels, ID) {
+export function populateTable(dataList, dataLabels, ID) {
     let table = document.getElementById(ID)
 
     const YEARS = [2021, 2022, 2023, 2024]
@@ -134,7 +125,7 @@ function populateTable(dataList, dataLabels, ID) {
         )
 
         for (let j = 0; j < dataList.length; j++ ) {
-            for (experience of dataList[j]) {
+            for (let experience of dataList[j]) {
                 
                 /* Parses start and end year. Handles following formats:
                     Aug 2021 - May 2024
@@ -207,7 +198,7 @@ function populateTable(dataList, dataLabels, ID) {
 }
 
 
-function populateSkillsTable(dataList, ID) {
+export function populateSkillsTable(dataList, ID) {
     let table = document.getElementById(ID)
 
     const SKILLS = ["ROS", "Python", "C/C++", "Javascript", "HTML/CSS", "Rust"]
@@ -230,10 +221,10 @@ function populateSkillsTable(dataList, ID) {
         )
 
         for (let j = 0; j < dataList.length; j++ ) {
-            for (experience of dataList[j]) {
+            for (let experience of dataList[j]) {
 
 
-                for (skill of experience["skills"]) {
+                for (let skill of experience["skills"]) {
                     if (skill === SKILLS[i]) {
                         tableElements[i].push(
                             `
