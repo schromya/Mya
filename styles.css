@@ -143,6 +143,7 @@ table {
     margin-left: 10px;
 }
 
+.mr-05 { margin-right: 5px;}
 .mr-1 { margin-right: 10px;}
 .mt-1 { margin-top: 10px;}
 
@@ -175,9 +176,6 @@ table {
     .mr-20-md  { margin-right: 20px;}
     .ml-20-md { margin-left: 20px;}
 }
-
-
-
 
 
 .mt-4 { margin-top: 40px;}
@@ -293,8 +291,13 @@ table {
 .content-flex {
     display: flex;
     flex-wrap: nowrap; 
-
 }
+
+.content-flex-vcenter{
+    display: flex;
+    align-items: center; 
+}
+
 
 @media (max-width: 1800px) {
     .content-flex {
@@ -458,7 +461,6 @@ table {
 
 }
 
-
 .tooltip-wrap {
     position: relative;
 }
@@ -481,3 +483,15 @@ table {
 }
 
 
+
+/**********************************************************************************
+    Button Interaction
+***********************************************************************************/
+.btn { 
+    cursor: pointer;  
+}
+
+.btn:hover { 
+    cursor: pointer;  
+    color: #FDC401; 
+}

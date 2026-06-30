@@ -6,10 +6,7 @@ import {setupGame} from "./gameLogic.js"
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
-
 
 
     //////////////////////// Setup page on first load ////////////////////////
@@ -29,7 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //////////////////////// Setup nav listeners ////////////////////////
+    const homeNavBtn = document.getElementById('homeNav');
+    const resumeNavBtn = document.getElementById('resumeNav');
+    
+    resumeNavBtn.addEventListener('click', () => {
+        buildResumePage("body");
+    });
 
-    // buildResumePage("body");
+    homeNavBtn.addEventListener('click', () => {
+        buildHomePage("body");
+    });
+    
     
 });
+
