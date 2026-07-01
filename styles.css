@@ -6,6 +6,12 @@
     font-family: Verdana, Helvetica, sans-serif;
 }
 
+/* Disable horizontal scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 a { 
     color: gray;
 }
