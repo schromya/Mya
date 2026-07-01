@@ -1,3 +1,6 @@
+import {experienceData, projectData, educationData, awardData} from "../data.js"
+import {populateData,populateSkillsTable}  from "../dataInjest.js"
+
 /**
  * 
  * @param {string} bodyId DOM ID of body to be overwritten with homepage
@@ -5,10 +8,24 @@
  */
 export function buildHomePage(bodyId) {
 
+    buildBody(bodyId);
+    populateData(experienceData, "experience");
+    populateData(projectData, "projects");
+    populateData(educationData, "education");
+    populateData(awardData, "awards");
+    populateSkillsTable(  [experienceData["experience"], projectData["projects"]],
+                        "skillsTable");
+
+
+
+}
+
+function buildBody(bodyId) {
+    
     let body = document.getElementById(bodyId);
     body.innerHTML = ""; // Clear existing data
-
-    body.innerHTML = `
+    
+    body.innerHTML = /*html*/ `
     
         <div class='text-white content-scroll static-height'>
             <!---------------------------------------- ABOUT ME ---------------------------------------->
@@ -92,9 +109,4 @@ export function buildHomePage(bodyId) {
                 </div>
         </div>
     `
-
-
-
-
-
 }

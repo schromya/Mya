@@ -6,7 +6,9 @@ Welcome to my portfolio website code! The raw resume data is located in JSON for
 # Running
 This is a static webpage you can open `index.html` in your browser or serve the files with your favorite static web server (for example VS Code's Liveserver).
 
+# Developing
 
+Install the [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) vscode extension to add syntax highlighting to the html strings inside the js files.
 # References
 
 - Debugging: ChatGPT, Claude

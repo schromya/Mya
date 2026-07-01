@@ -9,7 +9,7 @@ export function buildResumePage(bodyId) {
     let body = document.getElementById(bodyId);
     body.innerHTML = ""; // Clear existing data
 
-    body.innerHTML = `
+    body.innerHTML = /*html*/ `
     TODO
     `
 
