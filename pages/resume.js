@@ -1,6 +1,6 @@
 
 /**
- * 
+ * Build the resume page
  * @param {string} bodyId DOM ID of body to be overwritten with homepage
  *      HTML
  */

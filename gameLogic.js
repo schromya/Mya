@@ -240,10 +240,12 @@ class Game {
 
 
                 // Check if sprite is to the left or right of checkSprite 
-                if (highXBound < checkLowXBound || lowXBound > checkHighXBound) continue; // No collision on X axis
+                // No collision on X axis
+                if (highXBound < checkLowXBound || lowXBound > checkHighXBound) continue; 
 
                 // Check if sprite is above or below checkSprite
-                if (highYBound < checkLowYBound || lowYBound > checkHighYBound) continue; // No collision on Y axis
+                // No collision on Y axis
+                if (highYBound < checkLowYBound || lowYBound > checkHighYBound) continue; 
 
                 // If we reach here, sprites are colliding
                 return true;
@@ -344,8 +346,3 @@ function moveShroom(game, shroom, score) {
     }, 10); // Shroom updated every msec
     
 }
-
-
-
-
-

@@ -10,8 +10,7 @@ export function populateData(data, ID) {
 
         let skillsHTML = ""
         for (let skill of single["skills"]) {
-            skillsHTML += 
-                `
+            skillsHTML += /*html*/ `
                 <span class="border-rounded-md bg-yellow p-05 mr-1 mt-1">
                     ${skill}
                 </span>
@@ -20,8 +19,7 @@ export function populateData(data, ID) {
 
         let descriptionHTML = ""
         if (single["descriptions"] && single["descriptions"].length > 0) {
-            descriptionHTML = 
-            `
+            descriptionHTML = /*html*/ `
             <span class="pt-2">
                 • ${single["descriptions"].join('<br> • ')}
             </span>
@@ -30,25 +28,26 @@ export function populateData(data, ID) {
 
         let gitLinkHTML = ""
         if(single["gitLink"]) {
-            gitLinkHTML = 
-                `
-                <a href="${single["gitLink"]}" target="_blank"> <img src="static/GithubLogoWhite.png" class="img-sm pr-2 pt-1"></a>
+            gitLinkHTML = /*html*/ `
+                <a href="${single["gitLink"]}" target="_blank"> 
+                    <img src="static/GithubLogoWhite.png" class="img-sm pr-2 pt-1">
+                </a>
                 `
         }
 
         let linkHTML = ""
         if(single["link"]) {
-            linkHTML = 
-                `
-                <a href="${single["link"]}" target="_blank"> <img src="static/Link.png" class="img-sm pr-2 pt-1"></a>
+            linkHTML = /*html*/ `
+                <a href="${single["link"]}" target="_blank"> 
+                    <img src="static/Link.png" class="img-sm pr-2 pt-1">
+                </a>
                 `
         }
 
         let flexType=""
         let imageHTML = ""
         if(single["image"]) {
-            imageHTML = 
-                `
+            imageHTML = /*html*/ `
                 <img src="${single["image"]}" class="img-4xl border-rounded-sm">
                 `
             flexType = "content-flex"
@@ -58,8 +57,7 @@ export function populateData(data, ID) {
 
         let item = document.createElement('div')
 
-        item.innerHTML = 
-            `
+        item.innerHTML = /*html*/ `
             <div class="${flexType} pb-2">
                 <div class="pr-2">
                     <div class="content-spread">
@@ -176,23 +174,6 @@ export function populateTable(dataList, dataLabels, ID) {
         }
         table.appendChild(row);
     }
-
-
-    // // Make Key Table
-    // let keyTable = document.getElementById(keyID)
-    // for (let i = 0; i < dataLabels.length; i++ ) {
-    //     let row = document.createElement('tr')
-
-    //     row.innerHTML +=
-    //     `
-    //     <td class="bg-${COLORS[i]}">
-    //         <span class="text-md">${dataLabels[i].toString()}</span>
-            
-    //     </td>
-    //     `
-
-    //     keyTable.appendChild(row);
-    // }
 
 
 }

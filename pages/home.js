@@ -2,7 +2,7 @@ import {experienceData, projectData, educationData, awardData} from "../data.js"
 import {populateData,populateSkillsTable}  from "../dataInjest.js"
 
 /**
- * 
+ * Builds the home page.
  * @param {string} bodyId DOM ID of body to be overwritten with homepage
  *      HTML
  */
@@ -20,6 +20,12 @@ export function buildHomePage(bodyId) {
 
 }
 
+
+/**
+ * Builds the body of the home page.
+ * @param {string} bodyId DOM ID of body to be overwritten with homepage
+ *      HTML
+ */
 function buildBody(bodyId) {
     
     let body = document.getElementById(bodyId);
@@ -28,7 +34,7 @@ function buildBody(bodyId) {
     body.innerHTML = /*html*/ `
     
         <div class='text-white content-scroll static-height'>
-            <!---------------------------------------- ABOUT ME ---------------------------------------->
+            <!------------------------------------- ABOUT ME -------------------------------------->
             <div class="  m-2 min-static-height">
 
                 <div class="speech-bubble-box speech-bubble-triangle">
@@ -36,8 +42,11 @@ function buildBody(bodyId) {
                     <div class="text-2xl text-bold"> Hey there!</div>
 
                     <div class="text-lg">
-                        Welcome to Mya's personal website, where you can hop around, just like me, your friendly webpage frog!
-                        Mya is a <b>software engineer</b> who is currently working on <span class="text-yellow">robot dexterity</span> in the <span class="text-yellow">People and Robots Lab</span> at the UW-Madison.
+                        Welcome to Mya's personal website, where you can hop around, just like me, 
+                        your friendly webpage frog!
+                        Mya is a <b>software engineer</b> who is currently working on 
+                        <span class="text-yellow">robot dexterity</span> in the 
+                        <span class="text-yellow">People and Robots Lab</span> at the UW-Madison.
                         Before you go, be sure to play a game with me at the bottom of the page.
                     </div>
                 </div>
@@ -47,9 +56,9 @@ function buildBody(bodyId) {
                 </div>
             </div>
 
-            <!---------------------------------------- PORTFOLIO ---------------------------------------->
+            <!-------------------------------------- PORTFOLIO ------------------------------------>
             <div class="bg-gray ml-20-md mr-20-md text-md border-rounded-sm-md">
-                <!---------------------------------------- NAV ---------------------------------------->
+                <!-------------------------------------- NAV -------------------------------------->
                 <div class=" content-center content-stick-top pt-2 pb-1 border-rounded-sm-md">
 
                     <!-- <a href="#overviewSection" class="text-white">Overview</a> • -->
@@ -60,24 +69,12 @@ function buildBody(bodyId) {
                 </div>
                 <br><br>
 
-                <!---------------------------------------- CONTENT ---------------------------------------->
+                <!------------------------------------ CONTENT ------------------------------------>
 
-                <!---------------------------------------- GRAPHS ---------------------------------------->
+                <!------------------------------------- GRAPHS ------------------------------------>
                 <span class=" text-2xl text-bold pt-4 pl-2 " id="overviewSection"> Overview </span>
 
                 <div class=" content-flex pl-4 pb-5">
-
-                    <!-- <div class="bg-white ml-2 mt-2 border-rounded-sm">
-                        <table class="text-gray " id="timeTable"></table>
-
-
-                        <div class="content-center text-white text-md pb-1 pt-1">
-                            <span class="bg-green p-05 border-rounded-sm">Experience</span>
-                            <span class="bg-pink p-05 border-rounded-sm">Projects</span>
-                            <span class="bg-light-pink p-05 border-rounded-sm">Education</span>
-                            <span class="bg-teal p-05 border-rounded-sm">Awards</span>
-                        </div>
-                    </div> -->
 
                     <div class="bg-white  mt-2 border-rounded-sm">
                         <table class="text-gray" id="skillsTable"></table>
@@ -90,20 +87,26 @@ function buildBody(bodyId) {
                 </div>
 
                 <div class=" pl-2 pr-2">
-                    <!---------------------------------------- EXPERIENCE ---------------------------------------->
-                    <span class=" text-2xl text-bold pt-5" id="experienceSection"> Experience </span>
+                    <!-------------------------------- EXPERIENCE --------------------------------->
+                    <span class=" text-2xl text-bold pt-5" id="experienceSection"> 
+                        Experience 
+                    </span>
                     <ul id="experience" class="text-sm p-0"></ul>
 
-                    <!---------------------------------------- PROJECTS ---------------------------------------->
-                    <span class=" text-2xl text-bold pt-4" id="projectsSection"> Projects & Leadership </span>
+                    <!---------------------------------- PROJECTS --------------------------------->
+                    <span class=" text-2xl text-bold pt-4" id="projectsSection"> 
+                        Projects & Leadership 
+                    </span>
                     <ul id="projects" class="text-sm p-0"></ul>
 
-                    <!---------------------------------------- EDUCATION ---------------------------------------->
+                    <!---------------------------------- EDUCATION -------------------------------->
                     <span class="text-2xl text-bold pt-4" id="educationSection"> Education </span>
                     <ul id="education" class="text-sm p-0"></ul>
 
-                    <!---------------------------------------- ACHIEVEMENTS ---------------------------------------->
-                    <span class="text-2xl text-bold pt-4" id="awardsSection"> Awards & Competitions</span>
+                    <!-------------------------------- ACHIEVEMENTS ------------------------------->
+                    <span class="text-2xl text-bold pt-4" id="awardsSection"> 
+                        Awards & Competitions
+                    </span>
                     <ul id="awards" class="text-sm p-0"></ul>
 
                 </div>
