@@ -1,7 +1,7 @@
 import {buildHomePage} from "./pages/home.js"
 import {buildResumePage} from "./pages/resume.js"
-
 import {setupGame} from "./gameLogic.js"
+import { loadSVG } from "./utils.js";
 
 
 
@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Start game
     setupGame();
+
+    loadSVG("emailSVG", "./static/icons/email.svg")
 
 
     //////////////////////// Setup nav listeners ////////////////////////

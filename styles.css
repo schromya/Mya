@@ -54,6 +54,7 @@ table {
 
 .text-white {color:white;}
 .text-gray {color:gray;}
+.text-dark-gray {color:rgb(100, 100, 100);}
 .text-light-gray { color: #C5C5C5; }
 .text-green {color:#91AF72;}
 .text-yellow {color: #FDC401;}
@@ -493,12 +494,16 @@ table {
 /**********************************************************************************
     Button Interaction
 ***********************************************************************************/
-/* .btn { 
+.btn { 
     cursor: pointer;  
-} */
+}
  
-/*
+
 .btn:hover { 
     cursor: pointer;  
     color: #FDC401; 
-} */
+}
+
+.btn:hover svg {  
+    fill: #FDC401;
+}
