@@ -44,9 +44,9 @@ function buildBody(bodyId) {
                     <div class="text-lg">
                         Welcome to Mya's personal website, where you can hop around, just like me, 
                         your friendly webpage frog!
-                        Mya is a <b>software engineer</b> who is currently working on 
-                        <span class="text-yellow">robot dexterity</span> in the 
-                        <span class="text-yellow">People and Robots Lab</span> at the UW-Madison.
+                        Mya is a <b>robotics engineer</b> who is currently working on 
+                        <span class="text-yellow"><b>embedded robot software at 
+                        Trossen Robotics</b></span>. Check out her experience below.
                         Before you go, be sure to play a game with me at the bottom of the page.
                     </div>
                 </div>
@@ -94,17 +94,17 @@ function buildBody(bodyId) {
                     <ul id="experience" class="text-sm p-0"></ul>
 
                     <!---------------------------------- PROJECTS --------------------------------->
-                    <span class=" text-2xl text-bold pt-4" id="projectsSection"> 
+                    <span class=" text-2xl text-bold pt-5" id="projectsSection"> 
                         Projects & Leadership 
                     </span>
                     <ul id="projects" class="text-sm p-0"></ul>
 
                     <!---------------------------------- EDUCATION -------------------------------->
-                    <span class="text-2xl text-bold pt-4" id="educationSection"> Education </span>
+                    <span class="text-2xl text-bold pt-5" id="educationSection"> Education </span>
                     <ul id="education" class="text-sm p-0"></ul>
 
                     <!-------------------------------- ACHIEVEMENTS ------------------------------->
-                    <span class="text-2xl text-bold pt-4" id="awardsSection"> 
+                    <span class="text-2xl text-bold pt-5" id="awardsSection"> 
                         Awards & Competitions
                     </span>
                     <ul id="awards" class="text-sm p-0"></ul>

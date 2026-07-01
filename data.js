@@ -43,6 +43,16 @@ export const educationData = {
 export const experienceData = {
     "experience": [
         {
+            "title": "Robotics Engineer",
+            "org": "Trossen Robotics",
+            "date": "Jun 2026 -Present",
+            "location": "Downers Grove, IL",
+            "skills": ["Embedded firmware", "C/C++", "Python"],
+            "descriptions": [
+                "Develop embedded systems for robotic arms."
+            ],
+        },
+        {
             "title": "Robotics Software Engineering Intern",
             "org": "Amazon Robotics",
             "date": "May 2025 - Aug 2025",
@@ -56,7 +66,7 @@ export const experienceData = {
         {
             "title": "Human-Robot Interaction Researcher",
             "org": "UW-Madison People & Robots Lab",
-            "date": "Aug 2024 - Present",
+            "date": "Aug 2024 - May 2026",
             "location": "Madison, WI",
             "skills": ["ROS", "C/C++", "Python"],
             "descriptions": [

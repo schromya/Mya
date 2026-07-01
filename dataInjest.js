@@ -5,14 +5,13 @@
 export function populateData(data, ID) {
     let element = document.getElementById(ID)
 
-    // TODO rename single to better name when I have more braincells
     for (let single of data[ID]) {
 
         let skillsHTML = ""
         for (let skill of single["skills"]) {
             skillsHTML += /*html*/ `
                 <span class="border-rounded-md bg-yellow p-05 mr-1 mt-1">
-                    ${skill}
+                    <b>${skill}</b>
                 </span>
                 `
         }
