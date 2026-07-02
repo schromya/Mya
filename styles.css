@@ -151,6 +151,7 @@ table {
 }
 
 .mr-05 { margin-right: 5px;}
+.ml-1 { margin-left: 10px;}
 .mr-1 { margin-right: 10px;}
 .mt-1 { margin-top: 10px;}
 
@@ -313,10 +314,15 @@ table {
 }
 
 /**********************************************************************************
-    Images
+    Images / SVG
 ***********************************************************************************/
 .img-sm { 
     width:35px;
+    height:auto;
+}
+
+.svg-sm svg {  
+    width:40px;
     height:auto;
 }
 
@@ -339,6 +345,11 @@ table {
 @media (max-width: 600px) {
     .img-sm { 
         width:20px;
+        height:auto;
+    }
+
+    .svg-sm svg {  
+        width:30px;
         height:auto;
     }
 
