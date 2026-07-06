@@ -166,7 +166,8 @@ class Sprite {
     updateImage(imageURL) {
         this.image = imageURL;
         let sprite = document.getElementById(this.ID);
-        sprite.src = imageURL
+        if (sprite.getAttribute('src') != imageURL)  sprite.src = imageURL;
+             
     }
 
     updatePosition(xPosition, yPosition) {
