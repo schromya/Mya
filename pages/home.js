@@ -39,9 +39,9 @@ function buildBody(bodyId) {
 
                 <div class="speech-bubble-box speech-bubble-triangle">
 
-                    <div class="text-2xl text-bold"> Hey there!</div>
+                    <div class="text-2xl text-bold font-pixel"> Hey there!</div>
 
-                    <div class="text-lg">
+                    <div class="text-lg ">
                         Welcome to Mya's personal website, where you can hop around, just like me, 
                         your friendly webpage frog!
                         Mya is a <b>robotics engineer</b> who is currently working on 
@@ -62,17 +62,17 @@ function buildBody(bodyId) {
                 <div class=" content-center content-stick-top pt-2 pb-1 border-rounded-sm-md">
 
                     <!-- <a href="#overviewSection" class="text-white">Overview</a> • -->
-                    <a href="#experienceSection" class="text-white">Experience</a> •
-                    <a href="#projectsSection" class="text-white">Projects</a> •
-                    <a href="#educationSection" class="text-white">Education</a> •
-                    <a href="#awardsSection" class="text-white">Awards</a>
+                    <a href="#experienceSection" class="text-white font-pixel">Experience</a> •
+                    <a href="#projectsSection" class="text-white font-pixel">Projects</a> •
+                    <a href="#educationSection" class="text-white font-pixel">Education</a> •
+                    <a href="#awardsSection" class="text-white font-pixel">Awards</a>
                 </div>
                 <br><br>
 
                 <!------------------------------------ CONTENT ------------------------------------>
 
                 <!------------------------------------- GRAPHS ------------------------------------>
-                <span class=" text-2xl text-bold pt-4 pl-2 " id="overviewSection"> Overview </span>
+                <span class=" text-2xl text-bold font-pixel pt-4 pl-2 " id="overviewSection"> Overview </span>
 
                 <div class=" content-flex pl-4 pb-5">
 
@@ -88,19 +88,19 @@ function buildBody(bodyId) {
 
                 <div class=" pl-2 pr-2">
                     <!-------------------------------- EXPERIENCE --------------------------------->
-                    <span class=" text-2xl text-bold pt-5" id="experienceSection"> 
+                    <span class=" text-2xl text-bold font-pixel pt-5" id="experienceSection"> 
                         Experience 
                     </span>
                     <ul id="experience" class="text-sm p-0"></ul>
 
                     <!---------------------------------- PROJECTS --------------------------------->
-                    <span class=" text-2xl text-bold pt-5" id="projectsSection"> 
+                    <span class=" text-2xl text-bold font-pixel pt-5" id="projectsSection"> 
                         Projects & Leadership 
                     </span>
                     <ul id="projects" class="text-sm p-0"></ul>
 
                     <!---------------------------------- EDUCATION -------------------------------->
-                    <span class="text-2xl text-bold pt-5" id="educationSection"> Education </span>
+                    <span class="text-2xl text-bold font-pixel pt-5" id="educationSection"> Education </span>
                     <ul id="education" class="text-sm p-0"></ul>
 
                     <!-------------------------------- ACHIEVEMENTS ------------------------------->

@@ -3,7 +3,7 @@
     Global
 ***********************************************************************************/
 * {
-    font-family: Verdana, Helvetica, sans-serif;
+    font-family: 'JetBrains Mono', Courier;
 }
 
 /* Disable horizontal scroll */
@@ -37,6 +37,12 @@ table {
 /**********************************************************************************
     TEXT
 ***********************************************************************************/
+
+.font-pixel {
+   font-family: 'Pixel Operator 8';
+   font-weight: bold;
+}
+
 .text-sm { font-size: 17px;
     line-height: 1.5;}
 .text-md {font-size: 20px;}
