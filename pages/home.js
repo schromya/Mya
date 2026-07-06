@@ -104,7 +104,7 @@ function buildBody(bodyId) {
                     <ul id="education" class="text-sm p-0"></ul>
 
                     <!-------------------------------- ACHIEVEMENTS ------------------------------->
-                    <span class="text-2xl text-bold pt-5" id="awardsSection"> 
+                    <span class="text-2xl text-bold font-pixel pt-5" id="awardsSection"> 
                         Awards & Competitions
                     </span>
                     <ul id="awards" class="text-sm p-0"></ul>
