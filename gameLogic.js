@@ -20,21 +20,21 @@ export function setupGame() {
     )
 
     const frog = new Sprite(
-        'frog', 'assets/FrogSit.png', '',
+        'frog', 'assets/game/FrogSit.png', '',
         100 - xOffset, 0, Direction.UP, 
         100, 100, 0, 200 - yOffset
     )
 
     // Start and end mushroom off screen
     const shroom = new Sprite(
-        'shroom', 'assets/ShroomPink.png', '',
+        'shroom', 'assets/game/ShroomPink.png', '',
         window.innerWidth , 0, Direction.LEFT, 
         -100, window.innerWidth, 0, 0
     )
 
     // Start off screen and bring to screen when died
     const gameOverText = new Sprite(
-        'gameOver', 'assets/GameOver.png', '',
+        'gameOver', 'assets/game/GameOver.png', '',
     -300, 20 , Direction.STOPPED, 
     -300,  window.innerWidth/2 - 145/2, 0, 0
     )
@@ -274,7 +274,7 @@ function checkCollision(game, frog, shroom, gameOverText, state) {
             state.restart = false
             shroom.direction = Direction.STOPPED;
             frog.direction = Direction.STOPPED;
-            frog.updateImage('assets/FrogDead.png')
+            frog.updateImage('assets/game/FrogDead.png')
             gameOverText.updateXPosition(gameOverText.MAX_X_POSITION)
             state.enable = false;
 
@@ -291,7 +291,7 @@ function checkRestart(game, frog, shroom, gameOverText, state) {
 
         if (state.restart) {
             frog.reset()
-            frog.updateImage('assets/FrogSit.png')
+            frog.updateImage('assets/game/FrogSit.png')
             shroom.reset()
             gameOverText.reset()
             game.score = 0
@@ -306,7 +306,7 @@ function moveFrog(frog) {
     // Call recursively forever
     setTimeout(function() {
         if (frog.direction !== Direction.STOPPED) {
-            frog.updateImage('assets/FrogJump.png')
+            frog.updateImage('assets/game/FrogJump.png')
             let newYPos = frog.position[1]
             
             if (frog.direction === Direction.DOWN) newYPos -= 4
@@ -320,7 +320,7 @@ function moveFrog(frog) {
             // Only allow 1 jump at a time
             if (newYPos > frog.MIN_Y_POSITION) moveFrog(frog); // Recursively call while jumping
             else {
-                frog.updateImage('assets/FrogSit.png')
+                frog.updateImage('assets/game/FrogSit.png')
             }
         }
     }, 10); // Frog updated every 10 msec

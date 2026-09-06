@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Start game
     setupGame();
 
-    loadSVG("emailSVG", "./static/icons/email.svg");
-    loadSVG("githubSVG", "./static/icons/github.svg");
-    loadSVG("linkedinSVG", "./static/icons/linkedin.svg");
+    loadSVG("emailSVG", "./assets/icons/email.svg");
+    loadSVG("githubSVG", "./assets/icons/github.svg");
+    loadSVG("linkedinSVG", "./assets/icons/linkedin.svg");
 
 
     //////////////////////// Setup nav listeners ////////////////////////

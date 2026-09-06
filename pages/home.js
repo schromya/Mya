@@ -54,7 +54,7 @@ function buildBody(bodyId) {
 
 
                 <div class=" content-right">
-                    <img src="assets/FrogTalk.png" class="pb-2">
+                    <img src="assets/game/FrogTalk.png" class="pb-2">
                 </div>
             </div>
 

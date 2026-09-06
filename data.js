@@ -159,7 +159,7 @@ export const experienceData = {
                 "Won Best-in-Show poster: Schroder, M., Hicks, N. (2022, April 8). Simulated Energy Analyzer Measurements of a Charged Particle Beam Under Adiabatic and Non-adiabatic Reflections from a Multipole Plasma Trap Field [Poster presentation]. Alaska Space Grant Symposium, Juneau, AK, United States."
             ],
 
-            "image": "static/Plasma.png",
+            "image": "assets/portfolio/Plasma.png",
             "link": "https://drive.google.com/file/d/1WKuBSalsdkImyzIBPYUX13K42VPht4wV/view?usp=sharing"
         },
 
@@ -194,7 +194,7 @@ export const projectData = {
             ],
             "link": "http://quayside.app/",
             "gitLink": "https://github.com/quayside-app/quayside",
-            "image": "static/quayside.png"
+            "image": "assets/portfolio/quayside.png"
         },
         {
             "title": "UAA Robotics President",
@@ -211,7 +211,7 @@ export const projectData = {
             ],
             "link": "https://uaa-robo.github.io/UAA-Robotics-Website/",
             "gitLink": "https://github.com/UAA-Robo",
-            "image": "static/Robo.png"
+            "image": "assets/portfolio/Robo.png"
         },
         {
             "title": "Frog Game Programmer",
@@ -223,7 +223,7 @@ export const projectData = {
                 "Programmed a command-line ASCII Frog Game in Rust as part of a Network and Security Project."
             ],
             "gitLink": "https://github.com/schromya/FroggySecurity",
-            "image": "static/RustDemo.gif"
+            "image": "assets/portfolio/RustDemo.gif"
         },
 
         {
@@ -233,11 +233,11 @@ export const projectData = {
             "location": "Anchorage, AK",
             "skills": ["Python"],
             "descriptions": [
-                "Researched Low Earth Orbiting Inter-Satellite Link (ISL) static routing typologies.",
+                "Researched Low Earth Orbiting Inter-Satellite Link (ISL) assets/portfolio routing typologies.",
                 "Simulated Sparse, +Grid, and Extended +Grid ISL typologies in python."
             ],
             "gitLink": "https://github.com/schromya/LEO",
-            "image": "static/NetworksDemo.gif"
+            "image": "assets/portfolio/NetworksDemo.gif"
         },
 
         {

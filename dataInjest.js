@@ -29,7 +29,7 @@ export function populateData(data, ID) {
         if(single["gitLink"]) {
             gitLinkHTML = /*html*/ `
                 <a href="${single["gitLink"]}" target="_blank"> 
-                    <img src="static/icons/GithubLogoWhite.png" class="img-sm pr-2 pt-1">
+                    <img src="assets/icons/GithubLogoWhite.png" class="img-sm pr-2 pt-1">
                 </a>
                 `
         }
@@ -38,7 +38,7 @@ export function populateData(data, ID) {
         if(single["link"]) {
             linkHTML = /*html*/ `
                 <a href="${single["link"]}" target="_blank"> 
-                    <img src="static/icons/Link.png" class="img-sm pr-2 pt-1">
+                    <img src="assets/icons/Link.png" class="img-sm pr-2 pt-1">
                 </a>
                 `
         }
