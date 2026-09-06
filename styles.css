@@ -412,16 +412,10 @@ table {
 /**********************************************************************************
     Components
 ***********************************************************************************/
-.speech-bubble-box {
-    width: calc(70vw); /* Portion of the viewport height */
+.speech-bubble {
+    position: relative;
+    width: fit-content;
     margin: 50px auto;
-    background: gray;
-    padding: 20px;
-    color: #fff;
-    position:relative;
-    border-radius: 10px;
-    -moz-border-radius: 10px; 
-    -webkit-border-radius: 10px; 
 }
 
 .speech-bubble-triangle:before {
@@ -429,35 +423,61 @@ table {
     width: 0px;
     height: 0px;
     position: absolute;
-    border-left: 10px solid transparent;
-    border-right: 10px solid gray;
-    border-top: 10px solid gray;
-    border-bottom: 10px solid transparent;
+    border-left: 30px solid transparent;
+    border-right: 30px solid gray;
+    border-top: 30px solid gray;
+    border-bottom: 30px solid transparent;
     right: 0px;
-    bottom: -10px;
+    bottom: -30px;
 }
 
+.pixel-card {
+  --bg: gray;
+  --cut: 12px;
+  --pad: 30px;
+
+  width: calc(70vw); /* Portion of the viewport height */
+  position: relative;
+  background: var(--bg);
+  padding: var(--pad);
+  margin-inline: auto;
+  clip-path: polygon(
+    0 var(--cut),
+    var(--cut) var(--cut),
+    var(--cut) 0,
+    calc(100% - var(--cut)) 0,
+    calc(100% - var(--cut)) var(--cut),
+    100% var(--cut),
+    100% calc(100% - var(--cut)),
+    calc(100% - var(--cut)) calc(100% - var(--cut)),
+    calc(100% - var(--cut)) 100%,
+    var(--cut) 100%,
+    var(--cut) calc(100% - var(--cut)),
+    0 calc(100% - var(--cut))
+  );
+}
+
+
 @media (max-width: 600px) {
-    .speech-bubble-box {
-        width: calc(70vw); /* Portion of the viewport height */
-    }
     .speech-bubble-triangle:before {
         right: 80px;
         bottom: -15px;
+    }
+    .pixel-card {
+        width: calc(70vw); /* Portion of the viewport height */
     }
     
 }
 
 @media (min-width: 600px) and (max-width: 1200px) {
-    .speech-bubble-box {
-        width: calc(85vw); /* Portion of the viewport height */
-    }
     .speech-bubble-triangle:before {
         right: 80px;
         bottom: -15px;
     }
+    .pixel-card{
+        width: calc(85vw); /* Portion of the viewport height */
+    }
 }
-
 
 
 /**********************************************************************************
