@@ -63,7 +63,7 @@ function buildBody(bodyId) {
 
 
             <!-------------------------------------- PORTFOLIO ------------------------------------>
-            <div class="pixel-card text-md ">
+            <div class="pixel-card text-md">
                 <!-------------------------------------- NAV -------------------------------------->
                 <div class=" content-center content-stick-top pt-2 pb-1">
 

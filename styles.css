@@ -412,6 +412,16 @@ table {
 /**********************************************************************************
     Components
 ***********************************************************************************/
+.frog-game {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    z-index: 100;
+    pointer-events: none;
+}
+
 .speech-bubble {
     position: relative;
     width: fit-content;
