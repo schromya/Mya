@@ -45,9 +45,9 @@ export const experienceData = {
         {
             "title": "Robotics Engineer",
             "org": "Trossen Robotics",
-            "date": "Jun 2026 -Present",
+            "date": "Jun 2026 - Present",
             "location": "Downers Grove, IL",
-            "skills": ["Embedded firmware", "C/C++", "Python"],
+            "skills": ["Embedded firmware", "ROS", "C/C++", "Python"],
             "descriptions": [
                 "Develop embedded systems for robotic arms."
             ],
@@ -275,7 +275,7 @@ export const awardData = {
             "location": "Anchorage, AK",
             "skills": [],
             "descriptions": [
-                "Received The Seawolf Student Leader Award, which recognizes student leaders who, through their leadership, involvement, and com- mitment made significant contributions to campus life. Students are recognized for leadership contributions that go above and beyond the norm, while sustaining quality academic performance."
+                "Received The Seawolf Student Leader Award, which recognizes student leaders who, through their leadership, involvement, and commitment made significant contributions to campus life. Students are recognized for leadership contributions that go above and beyond the norm, while sustaining quality academic performance."
             ]
         },
         {
